@@ -22,7 +22,7 @@ const Footer = ({ onOpenApp }) => {
                         <h4 className="footer-heading">Navegación</h4>
                         <ul>
                             <li><a href="#features">GMC-001</a></li>
-                            <li><a href="#" onClick={handleAppClick}>App</a></li>
+                            <li><a href="#app-promo">App</a></li>
                             <li><a href="#gallery">Galería</a></li>
                             <li><a href="#video">Videos</a></li>
                             <li><a href="#contact">Contacto</a></li>

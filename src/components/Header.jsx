@@ -28,7 +28,7 @@ const Header = ({ onOpenApp }) => {
 
                 <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
                     <a href="#features" onClick={() => setIsMobileMenuOpen(false)}>GMC-001</a>
-                    <a href="#" onClick={handleAppClick}>App</a>
+                    <a href="#app-promo" onClick={() => setIsMobileMenuOpen(false)}>App</a>
                     <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>Galería</a>
                     <a href="#video" onClick={() => setIsMobileMenuOpen(false)}>Videos</a>
                     <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contacto</a>
