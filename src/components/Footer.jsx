@@ -8,9 +8,9 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <a href="#" className="logo">
-                            Toqui<span className="text-gradient">Control</span>
+                            <img src="/logo.png" alt="ToquiControl Logo" />
                         </a>
-                        <p className="footer-desc">Controladores MIDI de calidad premium diseñados y construidos en Chile para el mundo.</p>
+                        <p className="footer-desc">Controladores MIDI diseñados y construidos en Chile para el mundo.</p>
                     </div>
 
                     <div className="footer-links">

@@ -17,7 +17,7 @@ const Header = () => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
                 <a href="#" className="logo">
-                    Toqui<span className="text-gradient">Control</span>
+                    <img src="/logo.png" alt="ToquiControl Logo" />
                 </a>
 
                 <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>

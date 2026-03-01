@@ -4,34 +4,34 @@ import { Settings, Zap, Repeat, Shield, Sliders, Smartphone } from 'lucide-react
 const Features = () => {
     const features = [
         {
-            icon: <Settings className="text-cyan" size={32} />,
-            title: "Totalmente Programable",
-            desc: "Asigna cualquier mensaje MIDI (PC, CC, Note) a cualquiera de los switches con nuestra app dedicada."
+            icon: <Settings className="text-primary" size={32} />,
+            title: "Programación Vía Navegador",
+            desc: "Configura cada switch directamente desde tu navegador. Sin drivers ni instalaciones adicionales, compatible con cualquier computador."
         },
         {
-            icon: <Zap className="text-magenta" size={32} />,
-            title: "Latencia Cero",
-            desc: "Respuesta instantánea para cambios de preset o activación de efectos en tiempo real."
+            icon: <Zap className="text-secondary" size={32} />,
+            title: "Respuesta Sólida en Vivo",
+            desc: "Envío preciso de mensajes MIDI con funcionamiento estable y confiable para cambios de preset y control en tiempo real."
         },
         {
-            icon: <Shield className="text-cyan" size={32} />,
-            title: "Construcción Robusta",
-            desc: "Chasis metálico resistente diseñado para sobrevivir a los escenarios más exigentes."
+            icon: <Repeat className="text-primary" size={32} />,
+            title: "4 Modos de Uso",
+            desc: "Program Change para presets, Control Change para parámetros individuales, Note Mode para enviar notas y acordes a synths, y Looper Mode combinando PC + CC simultáneamente."
         },
         {
-            icon: <Repeat className="text-magenta" size={32} />,
-            title: "Modo Looper",
-            desc: "Layouts configurables ideales para controlar loopers de software o pedales avanzados."
+            icon: <Shield className="text-secondary" size={32} />,
+            title: "Controla Módulos o Apps",
+            desc: "Compatible con procesadores y software como Axe-Fx, Line 6 Helix, Kemper, plugins VST y DAWs. Integra tu setup físico o digital con control MIDI preciso y confiable."
         },
         {
-            icon: <Sliders className="text-cyan" size={32} />,
-            title: "Pantalla OLED",
-            desc: "Visualiza claramente qué preset o banco está activo, incluso en escenarios oscuros."
+            icon: <Sliders className="text-primary" size={32} />,
+            title: "Arquitectura Estable",
+            desc: "Diseñado para ofrecer funcionamiento consistente y libre de fallos. Conecta y toca con total confianza."
         },
         {
-            icon: <Smartphone className="text-magenta" size={32} />,
-            title: "App Integrada",
-            desc: "Configura todo desde tu dispositivo sin necesidad de menús complicados."
+            icon: <Smartphone className="text-secondary" size={32} />,
+            title: "Configuración desde el Mismo Dispositivo",
+            desc: "Programa el pedal directamente desde el propio GMC-001, sin depender de aplicaciones externas"
         }
     ];
 
@@ -39,8 +39,8 @@ const Features = () => {
         <section id="features" className="features">
             <div className="container">
                 <div className="section-header text-center">
-                    <h2 className="section-title">Diseñado para el <span className="text-gradient">Músico Moderno</span></h2>
-                    <p className="section-subtitle">El GMC-001 combina la tecnología más avanzada con la durabilidad de un pedal clásico.</p>
+                    <h2 className="section-title">Diseñado para el <span className="text-gradient">Escenario Real</span></h2>
+                    <p className="section-subtitle">El GMC-001 prioriza estabilidad, versatilidad MIDI y control profesional para músicos que necesitan confiar en su equipo.</p>
                 </div>
 
                 <div className="features-grid">

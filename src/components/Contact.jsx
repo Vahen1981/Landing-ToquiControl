@@ -8,7 +8,7 @@ const Contact = () => {
                     <div className="contact-content">
                         <h2 className="section-title">¿Listo para tomar el <span className="text-gradient">Control</span>?</h2>
                         <p className="contact-text">
-                            Estamos tomando reservas para la primera producción del GMC-001. Contáctanos para asegurar el tuyo o si tienes preguntas sobre características, compatibilidad y envíos.
+                            Escríbenos y responderemos todas tus dudas sobre el GMC-001.
                         </p>
                     </div>
 
