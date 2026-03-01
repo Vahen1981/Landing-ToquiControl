@@ -25,8 +25,8 @@ const Features = () => {
         },
         {
             icon: <Sliders className="text-primary" size={32} />,
-            title: "Arquitectura Estable",
-            desc: "Diseñado para ofrecer funcionamiento consistente y libre de fallos. Conecta y toca con total confianza."
+            title: "Conectividad MIDI Completa",
+            desc: "Salida MIDI DIN de 5 pines, USB-MIDI y Bluetooth MIDI integrados. Conéctalo a procesadores, interfaces, computadores o dispositivos móviles con total flexibilidad."
         },
         {
             icon: <Smartphone className="text-secondary" size={32} />,

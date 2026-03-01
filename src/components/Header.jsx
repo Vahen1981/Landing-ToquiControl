@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Facebook } from 'lucide-react';
+import { Menu, X, Instagram, Facebook, MessageCircle } from 'lucide-react';
 
-const Header = () => {
+const Header = ({ onOpenApp }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -13,6 +13,12 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleAppClick = (e) => {
+        e.preventDefault();
+        setIsMobileMenuOpen(false);
+        onOpenApp();
+    };
+
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
@@ -22,19 +28,22 @@ const Header = () => {
 
                 <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
                     <a href="#features" onClick={() => setIsMobileMenuOpen(false)}>GMC-001</a>
-                    <a href="#app" onClick={() => setIsMobileMenuOpen(false)}>App</a>
+                    <a href="#" onClick={handleAppClick}>App</a>
+                    <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>Galería</a>
                     <a href="#video" onClick={() => setIsMobileMenuOpen(false)}>Videos</a>
                     <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contacto</a>
 
                     <div className="social-links-mobile">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+                        <a href="https://instagram.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+                        <a href="https://facebook.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+                        <a href="https://wa.me/56988170598" target="_blank" rel="noopener noreferrer"><MessageCircle size={20} /></a>
                     </div>
                 </nav>
 
                 <div className="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+                    <a href="https://instagram.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+                    <a href="https://facebook.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+                    <a href="https://wa.me/56988170598" target="_blank" rel="noopener noreferrer"><MessageCircle size={20} /></a>
                 </div>
 
                 <button

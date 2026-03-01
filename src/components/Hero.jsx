@@ -1,4 +1,5 @@
 import React from 'react';
+import { MessageCircle } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -18,7 +19,7 @@ const Hero = () => {
                         Construcción sólida en madera y switches latching de alto desempeño para un control confiable, noche tras noche.
                     </p>
                     <div className="hero-cta">
-                        <a href="#contact" className="btn btn-primary">Reservar Ahora</a>
+                        <a href="#contact" className="btn btn-primary">Contactar</a>
                         <a href="#features" className="btn btn-secondary">Explorar Funciones</a>
                     </div>
                 </div>

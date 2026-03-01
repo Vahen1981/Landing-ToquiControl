@@ -15,7 +15,7 @@ const VideoSection = () => {
                         <iframe
                             width="560"
                             height="315"
-                            src="https://youtube.com/shorts/Ck2qoyWEVYY?feature=share"
+                            src="https://www.youtube.com/embed/LtOp78NsQpE?si=PVDoLtHR6wxwPnv8"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

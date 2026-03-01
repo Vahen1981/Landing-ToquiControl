@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'ProggyTinny';
+    src: url('src/fonts/ProggyTiny.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    background-image: url(src/images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Hace que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen dentro del contenedor */
+    width: 976px;
+    height: 640px;
+    margin: 0 auto;
+    /* [WEB CONVERSION] Centered horizontally */
+    position: relative;
+    /* Ensure stacking context */
+}
+
+/* Optional: Add vertical centering if height permits */
+@media (min-height: 650px) {
+    body {
+        position: relative;
+        top: 50vh;
+        transform: translateY(-50%);
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 896px;
+    height: 130px;
+    margin: 0px 40px 0 40px;
+}
+
+#main-logo {
+    width: 240px;
+    /*300px;*/
+    height: 104px;
+    /*130px;*/
+    background-image: url('src/images/logo.png');
+    background-size: contain;
+    margin-top: 20px;
+}
+
+#right-container {
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 360px;
+    height: 125px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: solid 1px rgb(73, 73, 73);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#right-left {
+    height: 70px;
+    width: 150px;
+    border: solid 1px #0a2229;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    background-color: black;
+}
+
+#info-title-box {
+    width: 140px;
+    height: 20px;
+    font-family: 'Trebuchet MS';
+    color: #31aed4;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-box {
+    width: 140px;
+    height: 30px;
+    color: #31aed4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr);
+    /* Dos filas de igual tamaño */
+    gap: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.info-boxes {
+    font-family: 'Trebuchet MS';
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#info-box-l {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 10px;
+    align-items: center;
+}
+
+#info-box-note {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 10px;
+    align-items: center;
+}
+
+#info-box-channel {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 10px;
+    align-items: center;
+}
+
+#right-right {
+    height: 125px;
+    width: 182px;
+}
+
+#up-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#up-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#up-down {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+#state-text {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#state-img {
+    width: 30px;
+    height: 30px;
+    background-image: url('src/images/Offline.png');
+    background-size: contain;
+}
+
+#enable-note-text {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+#select-enable {
+    height: 20px;
+    width: 80px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+#select-channel-general {
+    height: 20px;
+    width: 50px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.buttons {
+    width: 70px;
+    height: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: red;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+.buttons:disabled {
+    background-color: grey;
+    color: darkgrey;
+}
+
+#device {
+    position: relative;
+    background-image: url('src/images/device.png');
+    background-size: contain;
+    width: 896px;
+    /*1280 896 */
+    height: 504px;
+    /*720 504*/
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#lcd {
+    position: absolute;
+    top: 145px;
+    left: 165px;
+    width: 189px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lcd-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 18px;
+    width: 179px;
+}
+
+.lcd-text {
+    font-family: 'ProggyTinny';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    font-size: 24px;
+    height: 18px;
+    width: 14px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#led-mode-pc {
+    position: absolute;
+    top: 118px;
+    left: 500px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#led-mode-cc {
+    position: absolute;
+    top: 118px;
+    left: 543px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#pedal-mode {
+    position: absolute;
+    top: 156px;
+    left: 520px;
+    background-image: url('src/images/pedalReleased.png');
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#pedal-mode:active {
+    background-image: url('src/images/pedalPressed.png');
+}
+
+#led-up {
+    position: absolute;
+    top: 119px;
+    left: 710px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#pedal-up {
+    position: absolute;
+    top: 156px;
+    left: 707px;
+    background-image: url('src/images/pedalReleased.png');
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#pedal-up:active {
+    background-image: url('src/images/pedalPressed.png');
+}
+
+#led-a {
+    position: absolute;
+    top: 295px;
+    left: 144px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#pedal-a {
+    position: absolute;
+    top: 334px;
+    left: 142px;
+    background-image: url('src/images/pedalReleased.png');
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#pedal-a:active {
+    background-image: url('src/images/pedalPressed.png');
+}
+
+#led-b {
+    position: absolute;
+    top: 295px;
+    left: 333px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#pedal-b {
+    position: absolute;
+    top: 334px;
+    left: 331px;
+    background-image: url('src/images/pedalReleased.png');
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#pedal-b:active {
+    background-image: url('src/images/pedalPressed.png');
+}
+
+#led-c {
+    position: absolute;
+    top: 295px;
+    left: 521px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#pedal-c {
+    position: absolute;
+    top: 334px;
+    left: 520px;
+    background-image: url('src/images/pedalReleased.png');
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#pedal-c:active {
+    background-image: url('src/images/pedalPressed.png');
+}
+
+#led-down {
+    position: absolute;
+    top: 295px;
+    left: 710px;
+    background-size: contain;
+    width: 41px;
+    height: 41px;
+}
+
+#pedal-down {
+    position: absolute;
+    top: 334px;
+    left: 707px;
+    background-image: url('src/images/pedalReleased.png');
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#pedal-down:active {
+    background-image: url('src/images/pedalPressed.png');
+}

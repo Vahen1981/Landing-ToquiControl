@@ -1,0 +1,260 @@
+function noteContent(bank, patch, channel, notes){
+    let content = `
+        <form id="form-container">
+            <div class="settings-title">
+                <h1 id="textToChange">Pedal ${patch} / Bank ${bank}</h1>
+                <p id="infoPad"></p>
+                <div id="close">x</div>
+            </div>
+            <div id="sectionUP">
+                <div id="section1">
+                    <div class="select-container">
+                        <label for="Canal" class="upper-options">MIDI Channel</label>
+                        <div class="options-container">
+                            <select id="Canal" name="Canal">
+                                <option value="undefined"></option>
+                                <option value="0">01</option>
+                                <option value="1">02</option>
+                                <option value="2">03</option>
+                                <option value="3">04</option>
+                                <option value="4">05</option>
+                                <option value="5">06</option>
+                                <option value="6">07</option>
+                                <option value="7">08</option>
+                                <option value="8">09</option>
+                                <option value="9">10</option>
+                                <option value="10">11</option>
+                                <option value="11">12</option>
+                                <option value="12">13</option>
+                                <option value="13">14</option>
+                                <option value="14">15</option>
+                                <option value="15">16</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="upRightBox">
+                    <p id="infoTitle"> Current config </p>
+                    <div class="infoContainer">
+                        <p class="infoText">Channel: </p>
+                        <p id="info1" class="notes-info">${channel+1}</p>
+                    </div>
+                    <div class="infoContainer">
+                        <p class="infoText">Notes: </p>
+                        <p id="info3" class="notes-info">${notes}</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="section2">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="checkbox1" checked>
+                    <span class="checkmark"></span>
+                    Chord builder
+                </label>
+                <div class="select-container">
+                    <label for="Note">Root Note</label>
+                    <div class="options-container">
+                        <select id="Note" name="Note" class="chordBuilder">
+                            <option value="undefined"></option>
+                            <option value="C">C</option>
+                            <option value="C#">C#</option>
+                            <option value="D">D</option>
+                            <option value="D#">D#</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="F#">F#</option>
+                            <option value="G">G</option>
+                            <option value="G#">G#</option>
+                            <option value="A">A</option>
+                            <option value="A#">A#</option>
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+                    <label for="Chord" id="chord">Chord</label>
+                    <div class="options-container">
+                        <select id="Chord" name="Chord" class="chordBuilder">
+                            <option value="undefined"></option>
+                            <option value="Major">Major</option>
+                            <option value="minor">minor</option>
+                            <option value="dim">dim</option>
+                            <option value="maj7">maj7</option>
+                            <option value="minMaj7">minMaj7</option>
+                            <option value="min7">min7</option>
+                            <option value="dominant7">dominant7</option>
+                            <option value="halfDim7">halfDim7</option>
+                            <option value="dim7">dim7</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="section3">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="checkbox2">
+                    <span class="checkmark"></span>
+                    Note by note
+                </label>
+                <div class="select-container">
+                    <label for="Note1" class="labelSection3">Note</label>
+                    <div class="options-container">
+                        <select id="Note1" name="Note1" class="noteSelection">
+                            <option value="undefined"></option>
+                            <option value="None">None</option>
+                            <option value="C">C</option>
+                            <option value="C#">C#</option>
+                            <option value="D">D</option>
+                            <option value="D#">D#</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="F#">F#</option>
+                            <option value="G">G</option>
+                            <option value="G#">G#</option>
+                            <option value="A">A</option>
+                            <option value="A#">A#</option>
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+                    <label for="Octave1" id="octave1" class="labelSection3">Octave</label>
+                    <div class="options-container">
+                        <select id="Octave1" name="Octave1" class="octaveSelection">
+                            <option value="undefined"></option>
+                            <option value="0">-2</option>
+                            <option value="1">-1</option>
+                            <option value="2">0</option>
+                            <option value="3">1</option>
+                            <option value="4">2</option>
+                            <option value="5">3</option>
+                            <option value="6">4</option>
+                            <option value="7">5</option>
+                            <option value="8">6</option>
+                            <option value="9">7</option>
+                        </select>
+                    </div>
+            
+                </div>
+                <div class="select-container">
+                    <label for="Note2" class="labelSection3">Note</label>
+                    <div class="options-container">
+                        <select id="Note2" name="Note2" class="noteSelection">
+                            <option value="undefined"></option>
+                            <option value="None">None</option>
+                            <option value="C">C</option>
+                            <option value="C#">C#</option>
+                            <option value="D">D</option>
+                            <option value="D#">D#</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="F#">F#</option>
+                            <option value="G">G</option>
+                            <option value="G#">G#</option>
+                            <option value="A">A</option>
+                            <option value="A#">A#</option>
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+                    <label for="Octave2" id="octave2" class="labelSection3">Octave</label>
+                    <div class="options-container">
+                        <select id="Octave2" name="Octave2" class="octaveSelection">
+                            <option value="undefined"></option>
+                            <option value="0">-2</option>
+                            <option value="1">-1</option>
+                            <option value="2">0</option>
+                            <option value="3">1</option>
+                            <option value="4">2</option>
+                            <option value="5">3</option>
+                            <option value="6">4</option>
+                            <option value="7">5</option>
+                            <option value="8">6</option>
+                            <option value="9">7</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-container">
+                    <label for="Note3" class="labelSection3">Note</label>
+                    <div class="options-container">
+                        <select id="Note3" name="Note3" class="noteSelection">
+                            <option value="undefined"></option>
+                            <option value="None">None</option>
+                            <option value="C">C</option>
+                            <option value="C#">C#</option>
+                            <option value="D">D</option>
+                            <option value="D#">D#</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="F#">F#</option>
+                            <option value="G">G</option>
+                            <option value="G#">G#</option>
+                            <option value="A">A</option>
+                            <option value="A#">A#</option>
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+                    <label for="Octave3" id="octave3" class="labelSection3">Octave</label>
+                    <div class="options-container">
+                        <select id="Octave3" name="Octave3" class="octaveSelection">
+                            <option value="undefined"></option>
+                            <option value="0">-2</option>
+                            <option value="1">-1</option>
+                            <option value="2">0</option>
+                            <option value="3">1</option>
+                            <option value="4">2</option>
+                            <option value="5">3</option>
+                            <option value="6">4</option>
+                            <option value="7">5</option>
+                            <option value="8">6</option>
+                            <option value="9">7</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-container">
+                    <label for="Note4" class="labelSection3">Note</label>
+                    <div class="options-container">
+                        <select id="Note4" name="Note4" class="noteSelection">
+                            <option value="undefined"></option>
+                            <option value="None">None</option>
+                            <option value="C">C</option>
+                            <option value="C#">C#</option>
+                            <option value="D">D</option>
+                            <option value="D#">D#</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="F#">F#</option>
+                            <option value="G">G</option>
+                            <option value="G#">G#</option>
+                            <option value="A">A</option>
+                            <option value="A#">A#</option>
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+                    <label for="Octave4" id="octave4" class="labelSection3">Octave</label>
+                    <div class="options-container">
+                        <select id="Octave4" name="Octav4" class="octaveSelection">
+                            <option value="undefined"></option>
+                            <option value="0">-2</option>
+                            <option value="1">-1</option>
+                            <option value="2">0</option>
+                            <option value="3">1</option>
+                            <option value="4">2</option>
+                            <option value="5">3</option>
+                            <option value="6">4</option>
+                            <option value="7">5</option>
+                            <option value="8">6</option>
+                            <option value="9">7</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="btn-container">
+                <button id="program-btn">Programar</button>
+            </div>
+        </form>
+            `;
+    return content;
+}
+
