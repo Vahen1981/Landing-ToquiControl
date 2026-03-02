@@ -1,7 +1,10 @@
 import React from 'react';
 import { ExternalLink, Cpu } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const AppPromo = ({ onOpenApp }) => {
+    const { t } = useLanguage();
+
     return (
         <section id="app-promo" className="app-promo-section">
             <div className="container">
@@ -9,30 +12,28 @@ const AppPromo = ({ onOpenApp }) => {
                     <div className="app-promo-content">
                         <div className="promo-badge">
                             <Cpu size={16} />
-                            <span>Software Exclusivo</span>
+                            <span>{t('app_promo.badge')}</span>
                         </div>
-                        <h2 className="section-title">Programa tu Toqui sobre la <span className="text-gradient">Marcha</span></h2>
+                        <h2 className="section-title">{t('app_promo.title')} <span className="text-gradient">{t('app_promo.title_accent')}</span></h2>
                         <p className="promo-text">
-                            No necesitas instalar nada. Accede a nuestra aplicación web integrada para 
-                            configurar cada detalle de tu GMC-001 de forma visual e intuitiva. 
-                            Personaliza comandos, canales y presets en segundos.
+                            {t('app_promo.text')}
                         </p>
                         <div className="promo-features">
                             <div className="promo-feature">
                                 <span className="feature-dot"></span>
-                                <span>Interfaz Visual</span>
+                                <span>{t('app_promo.feat_visual')}</span>
                             </div>
                             <div className="promo-feature">
                                 <span className="feature-dot"></span>
-                                <span>Sincronización Real</span>
+                                <span>{t('app_promo.feat_sync')}</span>
                             </div>
                             <div className="promo-feature">
                                 <span className="feature-dot"></span>
-                                <span>Cero Instalación</span>
+                                <span>{t('app_promo.feat_zero')}</span>
                             </div>
                         </div>
                         <button onClick={onOpenApp} className="btn btn-primary btn-large">
-                            Abrir Aplicación de Programación <ExternalLink size={20} style={{ marginLeft: '10px' }} />
+                            {t('app_promo.btn')} <ExternalLink size={20} style={{ marginLeft: '10px' }} />
                         </button>
                     </div>
                     <div className="app-promo-image" onClick={onOpenApp}>

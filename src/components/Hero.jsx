@@ -1,7 +1,9 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="hero" id="home">
             <div className="hero-glow hero-glow-1"></div>
@@ -10,17 +12,15 @@ const Hero = () => {
             <div className="container hero-container">
                 <div className="hero-content animate-fade-in">
                     <h1 className="hero-title">
-                        Precisión bajo tus pies con el <br />
-                        <span className="text-gradient">GMC-001</span>
+                        {t('hero.title')} <br />
+                        <span className="text-gradient">{t('nav.gmc')}</span>
                     </h1>
                     <p className="hero-subtitle">
-                        Un controlador MIDI profesional diseñado para músicos que exigen estabilidad real en vivo. 
-                        Programación rápida desde cualquier navegador, sin drivers ni software adicional. 
-                        Construcción sólida en madera y switches latching de alto desempeño para un control confiable, noche tras noche.
+                        {t('hero.subtitle')}
                     </p>
                     <div className="hero-cta">
-                        <a href="#contact" className="btn btn-primary">Contactar</a>
-                        <a href="#features" className="btn btn-secondary">Explorar Funciones</a>
+                        <a href="#contact" className="btn btn-primary">{t('hero.cta_contact')}</a>
+                        <a href="#features" className="btn btn-secondary">{t('hero.cta_explore')}</a>
                     </div>
                 </div>
 

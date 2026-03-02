@@ -1,20 +1,23 @@
 import React from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Gallery = () => {
+    const { t } = useLanguage();
+
     const images = [
-        { src: '/01.png', alt: 'ToquiControl GMC-001 - Vista Frontal' },
-        { src: '/02.png', alt: 'ToquiControl GMC-001 - Detalle de Madera' },
-        { src: '/03.png', alt: 'ToquiControl GMC-001 - En Acción' },
-        { src: '/04.png', alt: 'ToquiControl GMC-001 - Conectividad' }
+        { src: '/01.png', alt: t('gallery.alt_1') },
+        { src: '/02.png', alt: t('gallery.alt_2') },
+        { src: '/03.png', alt: t('gallery.alt_3') },
+        { src: '/04.png', alt: t('gallery.alt_4') }
     ];
 
     return (
         <section id="gallery" className="gallery-section">
             <div className="container">
                 <div className="section-header text-center">
-                    <h2 className="section-title">Galería de <span className="text-gradient">Fotos</span></h2>
+                    <h2 className="section-title">{t('gallery.title')} <span className="text-gradient">{t('gallery.title_accent')}</span></h2>
                     <p className="section-subtitle">
-                        Descubre los detalles y la calidad artesanal detrás de cada GMC-001.
+                        {t('gallery.subtitle')}
                     </p>
                 </div>
                 

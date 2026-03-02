@@ -1,16 +1,18 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Contact = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="contact" className="contact-section">
             <div className="container">
                 <div className="contact-card animate-fade-in">
                     <div className="contact-header">
-                        <h2 className="section-title">¿Listo para tomar el <span className="text-gradient">Control</span>?</h2>
+                        <h2 className="section-title">{t('contact.title')} <span className="text-gradient">{t('contact.title_accent')}</span></h2>
                         <p className="contact-subtitle">
-                            La forma más rápida y directa de contactarnos es a través de WhatsApp. 
-                            Estamos listos para resolver todas tus dudas sobre el GMC-001.
+                            {t('contact.subtitle')}
                         </p>
                     </div>
                     
@@ -21,7 +23,7 @@ const Contact = () => {
                                 <span className="status-dot"></span>
                             </div>
                             <div className="whatsapp-text">
-                                <span className="whatsapp-label">Escríbenos ahora</span>
+                                <span className="whatsapp-label">{t('contact.whatsapp_label')}</span>
                                 <span className="whatsapp-number">+56 9 8817 0598</span>
                             </div>
                             <div className="whatsapp-arrow">→</div>
@@ -29,7 +31,7 @@ const Contact = () => {
                     </div>
 
                     <div className="contact-footer">
-                        <p>Atención personalizada</p>
+                        <p>{t('contact.attention')}</p>
                     </div>
                 </div>
             </div>

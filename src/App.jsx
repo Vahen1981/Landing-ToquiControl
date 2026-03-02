@@ -8,26 +8,34 @@ import AppPromo from './components/AppPromo';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Monitor, X } from 'lucide-react';
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
 
-const DeviceWarning = ({ onClose }) => (
-  <div className="device-warning-overlay">
-    <div className="device-warning-card animate-scale-in">
-      <button className="close-warning" onClick={onClose}><X size={24} /></button>
-      <div className="warning-icon">
-        <Monitor size={48} />
+const DeviceWarning = ({ onClose }) => {
+  const { t } = useLanguage();
+  return (
+    <div className="device-warning-overlay">
+      <div className="device-warning-card animate-scale-in">
+        <button className="close-warning" onClick={onClose}><X size={24} /></button>
+        <div className="warning-icon">
+          <Monitor size={48} />
+        </div>
+        <h2>{t('warning.title')}</h2>
+        <p>
+          {t('warning.p1').split('GMC-001').map((part, i, arr) => (
+            <React.Fragment key={i}>
+              {part}
+              {i < arr.length - 1 && <strong>GMC-001</strong>}
+            </React.Fragment>
+          ))}
+        </p>
+        <p className="warning-note">
+          {t('warning.p2')}
+        </p>
+        <button className="btn btn-primary" onClick={onClose}>{t('warning.btn')}</button>
       </div>
-      <h2>Acceso Restringido</h2>
-      <p>
-        La aplicación de programación <strong>GMC-001</strong> requiere una conexión USB-MIDI 
-        que solo es compatible con navegadores de escritorio en <strong>PC o Mac</strong>.
-      </p>
-      <p className="warning-note">
-        Por favor, vuelve a visitarnos desde tu computadora para configurar tu dispositivo.
-      </p>
-      <button className="btn btn-primary" onClick={onClose}>Entendido</button>
     </div>
-  </div>
-);
+  );
+};
 
 function App() {
   const [showApp, setShowApp] = useState(false);
@@ -71,19 +79,21 @@ function App() {
   }
 
   return (
-    <div className="app-wrapper">
-      <Header onOpenApp={handleOpenApp} />
-      <main>
-        <Hero />
-        <Features />
-        <Gallery />
-        <AppPromo onOpenApp={handleOpenApp} />
-        <VideoSection />
-        <Contact />
-      </main>
-      <Footer onOpenApp={handleOpenApp} />
-      {showWarning && <DeviceWarning onClose={() => setShowWarning(false)} />}
-    </div>
+    <LanguageProvider>
+      <div className="app-wrapper">
+        <Header onOpenApp={handleOpenApp} />
+        <main>
+          <Hero />
+          <Features />
+          <Gallery />
+          <AppPromo onOpenApp={handleOpenApp} />
+          <VideoSection />
+          <Contact />
+        </main>
+        <Footer onOpenApp={handleOpenApp} />
+        {showWarning && <DeviceWarning onClose={() => setShowWarning(false)} />}
+      </div>
+    </LanguageProvider>
   );
 }
 
