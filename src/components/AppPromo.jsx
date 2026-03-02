@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Cpu } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import appCapture from '../assets/app-capture.png';
 
 const AppPromo = ({ onOpenApp }) => {
     const { t } = useLanguage();
@@ -44,7 +45,7 @@ const AppPromo = ({ onOpenApp }) => {
                                 </div>
                                 <div className="browser-bar">toquicontrol.cl/app</div>
                             </div>
-                            <img src="/app-capture.png" alt="ToquiControl Web App Interface" />
+                            <img src={appCapture} alt="ToquiControl Web App Interface" />
                             <div className="image-overlay">
                                 <div className="play-button">
                                     <ExternalLink size={32} />

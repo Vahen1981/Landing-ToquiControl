@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Facebook, MessageCircle, Globe } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import logo from '../assets/logo.png';
 
 const Header = ({ onOpenApp }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,7 @@ const Header = ({ onOpenApp }) => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
                 <a href="#" className="logo">
-                    <img src="/logo.png" alt="ToquiControl Logo" />
+                    <img src={logo} alt="ToquiControl Logo" />
                 </a>
 
                 <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>

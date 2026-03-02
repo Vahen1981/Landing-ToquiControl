@@ -1,5 +1,13 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import capture2 from '../assets/capture2.png';
+import capture5 from '../assets/capture5.png';
+import capture3 from '../assets/capture3.png';
+import capture4 from '../assets/capture4.png';
+import demo1 from '../assets/demo1.mp4';
+import NotesMode from '../assets/NotesMode.mp4';
+import Ensamblaje from '../assets/Ensamblaje.mp4';
+import demoAmplitube from '../assets/demo-amplitube.mp4';
 
 const VideoSection = () => {
     const { t } = useLanguage();
@@ -20,10 +28,10 @@ const VideoSection = () => {
                             controls 
                             loop 
                             muted 
-                            poster="/capture2.png"
+                            poster={capture2}
                             className="local-video"
                         >
-                            <source src="/demo1.mp4" type="video/mp4" />
+                            <source src={demo1} type="video/mp4" />
                             {t('video.no_support')}
                         </video>
                     </div>
@@ -38,10 +46,10 @@ const VideoSection = () => {
                                 controls 
                                 loop 
                                 muted 
-                                poster="/capture5.png"
+                                poster={capture5}
                                 className="local-video"
                             >
-                                <source src="/NotesMode.mp4" type="video/mp4" />
+                                <source src={NotesMode} type="video/mp4" />
                                 {t('video.no_support')}
                             </video>
                         </div>
@@ -73,10 +81,10 @@ const VideoSection = () => {
                                 controls 
                                 loop 
                                 muted 
-                                poster="/capture3.png"
+                                poster={capture3}
                                 className="local-video"
                             >
-                                <source src="/Ensamblaje.mp4" type="video/mp4" />
+                                <source src={Ensamblaje} type="video/mp4" />
                                 {t('video.no_support')}
                             </video>
                         </div>
@@ -91,10 +99,10 @@ const VideoSection = () => {
                                 controls 
                                 loop 
                                 muted 
-                                poster="/capture4.png"
+                                poster={capture4}
                                 className="local-video"
                             >
-                                <source src="/demo-amplitube.mp4" type="video/mp4" />
+                                <source src={demoAmplitube} type="video/mp4" />
                                 {t('video.no_support')}
                             </video>
                         </div>

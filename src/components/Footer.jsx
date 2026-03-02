@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Facebook, Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import logo from '../assets/logo.png';
 
 const Footer = ({ onOpenApp }) => {
     const { t } = useLanguage();
@@ -15,7 +16,7 @@ const Footer = ({ onOpenApp }) => {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <a href="#" className="logo">
-                            <img src="/logo.png" alt="ToquiControl Logo" />
+                            <img src={logo} alt="ToquiControl Logo" />
                         </a>
                         <p className="footer-desc">{t('footer.desc')}</p>
                     </div>
