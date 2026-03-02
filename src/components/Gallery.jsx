@@ -1,14 +1,18 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import img1 from '../assets/01.png';
+import img2 from '../assets/02.png';
+import img3 from '../assets/03.png';
+import img4 from '../assets/04.png';
 
 const Gallery = () => {
     const { t } = useLanguage();
 
     const images = [
-        { src: '/01.png', alt: t('gallery.alt_1') },
-        { src: '/02.png', alt: t('gallery.alt_2') },
-        { src: '/03.png', alt: t('gallery.alt_3') },
-        { src: '/04.png', alt: t('gallery.alt_4') }
+        { src: img1, alt: t('gallery.alt_1') },
+        { src: img2, alt: t('gallery.alt_2') },
+        { src: img3, alt: t('gallery.alt_3') },
+        { src: img4, alt: t('gallery.alt_4') }
     ];
 
     return (
