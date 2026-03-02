@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import gmcWood from '../assets/gmc-wood.png'
 
 const Hero = () => {
     const { t } = useLanguage();
@@ -25,9 +26,8 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                    {/* We will replace this image src with the generated image artifact later */}
                     <div className="hero-image-placeholder">
-                        <img src="/gmc-wood.png" alt="GMC-001 MIDI Controller Wood Edition" className="hero-image" />
+                        <img src={gmcWood} alt="GMC-001 MIDI Controller Wood Edition" className="hero-image" />
                         <div className="image-glow"></div>
                     </div>
                 </div>
