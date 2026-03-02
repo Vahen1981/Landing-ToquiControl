@@ -47,13 +47,21 @@ function App() {
     return !isMobile;
   };
 
+  // const handleOpenApp = () => {
+  //   if (isDesktop()) {
+  //     setShowApp(true);
+  //   } else {
+  //     setShowWarning(true);
+  //   }
+  // };
+
   const handleOpenApp = () => {
-    if (isDesktop()) {
-      setShowApp(true);
-    } else {
-      setShowWarning(true);
-    }
-  };
+  if (isDesktop()) {
+    window.open(`${import.meta.env.BASE_URL}app/index.html`, "_blank");
+  } else {
+    setShowWarning(true);
+  }
+};
 
   // Listen for message from iframe (from the back button we'll add)
   useEffect(() => {
