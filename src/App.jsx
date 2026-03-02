@@ -56,12 +56,12 @@ function App() {
   // };
 
   const handleOpenApp = () => {
-  if (isDesktop()) {
-    window.open(`${import.meta.env.BASE_URL}app/index.html`, "_blank");
-  } else {
-    setShowWarning(true);
-  }
-};
+    if (isDesktop()) {
+      window.location.href = `${import.meta.env.BASE_URL}app/index.html`;
+    } else {
+      setShowWarning(true);
+    }
+  };
 
   // Listen for message from iframe (from the back button we'll add)
   useEffect(() => {
