@@ -139,7 +139,7 @@
 
     <script>
         document.getElementById('floating-back-button').addEventListener('click', () => {
-            window.parent.postMessage('backToLanding', '*');
+            window.location.href = '../';
         });
 
         document.getElementById('floating-back-button').addEventListener('mouseover', function () {
