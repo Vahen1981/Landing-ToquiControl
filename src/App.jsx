@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -15,7 +15,9 @@ const DeviceWarning = ({ onClose }) => {
   return (
     <div className="device-warning-overlay">
       <div className="device-warning-card animate-scale-in">
-        <button className="close-warning" onClick={onClose}><X size={24} /></button>
+        <button className="close-warning" onClick={onClose}>
+          <X size={24} />
+        </button>
         <div className="warning-icon">
           <Monitor size={48} />
         </div>
@@ -31,29 +33,25 @@ const DeviceWarning = ({ onClose }) => {
         <p className="warning-note">
           {t('warning.p2')}
         </p>
-        <button className="btn btn-primary" onClick={onClose}>{t('warning.btn')}</button>
+        <button className="btn btn-primary" onClick={onClose}>
+          {t('warning.btn')}
+        </button>
       </div>
     </div>
   );
 };
 
 function App() {
-  const [showApp, setShowApp] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
 
   const isDesktop = () => {
     const userAgent = navigator.userAgent.toLowerCase();
-    const isMobile = /iphone|ipad|ipod|android|blackberry|mini|windows\sphone|palm|mobile/i.test(userAgent);
+    const isMobile =
+      /iphone|ipad|ipod|android|blackberry|mini|windows\sphone|palm|mobile/i.test(
+        userAgent
+      );
     return !isMobile;
   };
-
-  // const handleOpenApp = () => {
-  //   if (isDesktop()) {
-  //     setShowApp(true);
-  //   } else {
-  //     setShowWarning(true);
-  //   }
-  // };
 
   const handleOpenApp = () => {
     if (isDesktop()) {
@@ -62,29 +60,6 @@ function App() {
       setShowWarning(true);
     }
   };
-
-  // Listen for message from iframe (from the back button we'll add)
-  useEffect(() => {
-    const handleMessage = (event) => {
-      if (event.data === 'backToLanding') {
-        setShowApp(false);
-      }
-    };
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
-
-  if (showApp) {
-    return (
-      <div className="app-view-container" style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
-        <iframe 
-          src="/app/index.html" 
-          title="GMC-001 Web App" 
-          style={{ width: '100%', height: '100%', border: 'none' }}
-        />
-      </div>
-    );
-  }
 
   return (
     <LanguageProvider>
@@ -99,7 +74,9 @@ function App() {
           <Contact />
         </main>
         <Footer onOpenApp={handleOpenApp} />
-        {showWarning && <DeviceWarning onClose={() => setShowWarning(false)} />}
+        {showWarning && (
+          <DeviceWarning onClose={() => setShowWarning(false)} />
+        )}
       </div>
     </LanguageProvider>
   );
