@@ -1,26 +1,114 @@
 import React from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const VideoSection = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="video" className="video-section">
             <div className="container">
                 <div className="section-header text-center">
-                    <h2 className="section-title">El GMC-001 en <span className="text-gradient">Acción</span></h2>
-                    <p className="section-subtitle">Mira cómo el GMC-001 funciona para un guitarrista real</p>
+                    <h2 className="section-title">{t('video.title')} <span className="text-gradient">{t('video.title_accent')}</span></h2>
+                    <p className="section-subtitle">{t('video.subtitle')}</p>
                 </div>
 
-                <div className="video-grid">
+                <div className="video-main animate-fade-in">
                     <div className="video-wrapper">
-                        {/* Placeholder IFRAME para video de YouTube */}
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://youtube.com/shorts/Ck2qoyWEVYY?feature=share"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+                        <video 
+                            width="100%" 
+                            height="auto" 
+                            controls 
+                            loop 
+                            muted 
+                            poster="/capture2.png"
+                            className="local-video"
+                        >
+                            <source src="/demo1.mp4" type="video/mp4" />
+                            {t('video.no_support')}
+                        </video>
+                    </div>
+                </div>
+
+                <div className="video-secondary animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                    <div className="secondary-video-content">
+                        <div className="video-wrapper">
+                            <video 
+                                width="100%" 
+                                height="auto" 
+                                controls 
+                                loop 
+                                muted 
+                                poster="/capture5.png"
+                                className="local-video"
+                            >
+                                <source src="/NotesMode.mp4" type="video/mp4" />
+                                {t('video.no_support')}
+                            </video>
+                        </div>
+                        <div className="secondary-video-text">
+                            <h3>{t('video.mode_notes')} <span className="text-gradient">{t('video.mode_notes_accent')}</span></h3>
+                            <p>
+                                {t('video.mode_notes_desc').split('{bold}').map((part, i, arr) => (
+                                    <React.Fragment key={i}>
+                                        {part}
+                                        {i < arr.length - 1 && <strong>{t('video.mode_notes_desc_bold')}</strong>}
+                                    </React.Fragment>
+                                ))}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="video-secondary animate-fade-in" style={{ animationDelay: '0.3s', marginTop: '4rem' }}>
+                    <div className="secondary-video-content video-reverse">
+                        <div className="secondary-video-text">
+                            <h3>{t('video.assembly')}</h3>
+                            <p>
+                                {t('video.assembly_desc')}
+                            </p>
+                        </div>
+                        <div className="video-wrapper">
+                            <video 
+                                width="100%" 
+                                height="auto" 
+                                controls 
+                                loop 
+                                muted 
+                                poster="/capture3.png"
+                                className="local-video"
+                            >
+                                <source src="/Ensamblaje.mp4" type="video/mp4" />
+                                {t('video.no_support')}
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div className="video-secondary animate-fade-in" style={{ animationDelay: '0.4s', marginTop: '4rem' }}>
+                    <div className="secondary-video-content">
+                        <div className="video-wrapper">
+                            <video 
+                                width="100%" 
+                                height="auto" 
+                                controls 
+                                loop 
+                                muted 
+                                poster="/capture4.png"
+                                className="local-video"
+                            >
+                                <source src="/demo-amplitube.mp4" type="video/mp4" />
+                                {t('video.no_support')}
+                            </video>
+                        </div>
+                        <div className="secondary-video-text">
+                            <h3>{t('video.demo_amplitube')} <span className="text-gradient">{t('video.demo_amplitube_accent')}</span></h3>
+                            <p>
+                                {t('video.demo_amplitube_desc').split('{bold}').map((part, i, arr) => (
+                                    <React.Fragment key={i}>
+                                        {part}
+                                        {i < arr.length - 1 && <strong>{t('video.demo_amplitube_desc_bold')}</strong>}
+                                    </React.Fragment>
+                                ))}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

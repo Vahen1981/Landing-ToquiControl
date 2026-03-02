@@ -1,37 +1,40 @@
 import React from 'react';
 import { Settings, Zap, Repeat, Shield, Sliders, Smartphone } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Features = () => {
+    const { t } = useLanguage();
+
     const features = [
         {
             icon: <Settings className="text-primary" size={32} />,
-            title: "Programación Vía Navegador",
-            desc: "Configura cada switch directamente desde tu navegador. Sin drivers ni instalaciones adicionales, compatible con cualquier computador."
+            title: t('features.f1_title'),
+            desc: t('features.f1_desc')
         },
         {
             icon: <Zap className="text-secondary" size={32} />,
-            title: "Respuesta Sólida en Vivo",
-            desc: "Envío preciso de mensajes MIDI con funcionamiento estable y confiable para cambios de preset y control en tiempo real."
+            title: t('features.f2_title'),
+            desc: t('features.f2_desc')
         },
         {
             icon: <Repeat className="text-primary" size={32} />,
-            title: "4 Modos de Uso",
-            desc: "Program Change para presets, Control Change para parámetros individuales, Note Mode para enviar notas y acordes a synths, y Looper Mode combinando PC + CC simultáneamente."
+            title: t('features.f3_title'),
+            desc: t('features.f3_desc')
         },
         {
             icon: <Shield className="text-secondary" size={32} />,
-            title: "Controla Módulos o Apps",
-            desc: "Compatible con procesadores y software como Axe-Fx, Line 6 Helix, Kemper, plugins VST y DAWs. Integra tu setup físico o digital con control MIDI preciso y confiable."
+            title: t('features.f4_title'),
+            desc: t('features.f4_desc')
         },
         {
             icon: <Sliders className="text-primary" size={32} />,
-            title: "Arquitectura Estable",
-            desc: "Diseñado para ofrecer funcionamiento consistente y libre de fallos. Conecta y toca con total confianza."
+            title: t('features.f5_title'),
+            desc: t('features.f5_desc')
         },
         {
             icon: <Smartphone className="text-secondary" size={32} />,
-            title: "Configuración desde el Mismo Dispositivo",
-            desc: "Programa el pedal directamente desde el propio GMC-001, sin depender de aplicaciones externas"
+            title: t('features.f6_title'),
+            desc: t('features.f6_desc')
         }
     ];
 
@@ -39,8 +42,8 @@ const Features = () => {
         <section id="features" className="features">
             <div className="container">
                 <div className="section-header text-center">
-                    <h2 className="section-title">Diseñado para el <span className="text-gradient">Escenario Real</span></h2>
-                    <p className="section-subtitle">El GMC-001 prioriza estabilidad, versatilidad MIDI y control profesional para músicos que necesitan confiar en su equipo.</p>
+                    <h2 className="section-title">{t('features.title')} <span className="text-gradient">{t('features.title_accent')}</span></h2>
+                    <p className="section-subtitle">{t('features.subtitle')}</p>
                 </div>
 
                 <div className="features-grid">

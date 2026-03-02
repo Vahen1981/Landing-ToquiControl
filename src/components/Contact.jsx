@@ -1,36 +1,37 @@
 import React from 'react';
+import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Contact = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="contact" className="contact-section">
             <div className="container">
-                <div className="contact-container">
-                    <div className="contact-content">
-                        <h2 className="section-title">¿Listo para tomar el <span className="text-gradient">Control</span>?</h2>
-                        <p className="contact-text">
-                            Escríbenos y responderemos todas tus dudas sobre el GMC-001.
+                <div className="contact-card animate-fade-in">
+                    <div className="contact-header">
+                        <h2 className="section-title">{t('contact.title')} <span className="text-gradient">{t('contact.title_accent')}</span></h2>
+                        <p className="contact-subtitle">
+                            {t('contact.subtitle')}
                         </p>
                     </div>
-
-                    <div className="contact-form-wrapper">
-                        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-                            <div className="form-group">
-                                <label htmlFor="name">Nombre</label>
-                                <input type="text" id="name" placeholder="Tu nombre" required />
+                    
+                    <div className="contact-main">
+                        <a href="https://wa.me/56988170598" target="_blank" rel="noopener noreferrer" className="whatsapp-cta-large">
+                            <div className="whatsapp-icon-wrapper">
+                                <MessageCircle size={48} />
+                                <span className="status-dot"></span>
                             </div>
-
-                            <div className="form-group">
-                                <label htmlFor="email">Email</label>
-                                <input type="email" id="email" placeholder="tu@email.com" required />
+                            <div className="whatsapp-text">
+                                <span className="whatsapp-label">{t('contact.whatsapp_label')}</span>
+                                <span className="whatsapp-number">+56 9 8817 0598</span>
                             </div>
+                            <div className="whatsapp-arrow">→</div>
+                        </a>
+                    </div>
 
-                            <div className="form-group">
-                                <label htmlFor="message">Mensaje</label>
-                                <textarea id="message" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea>
-                            </div>
-
-                            <button type="submit" className="btn btn-primary w-full">Enviar Mensaje</button>
-                        </form>
+                    <div className="contact-footer">
+                        <p>{t('contact.attention')}</p>
                     </div>
                 </div>
             </div>
