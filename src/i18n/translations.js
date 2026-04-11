@@ -1,14 +1,15 @@
 export const translations = {
   es: {
     nav: {
-      gmc: "GMC-001",
+      home: "Inicio",
+      gmc: "Características",
       app: "App",
       gallery: "Galería",
       videos: "Videos",
       contact: "Contacto",
     },
     hero: {
-      title: "Precisión bajo tus pies con el",
+      title: "Control total con el ",
       subtitle: "Un controlador MIDI profesional diseñado para músicos que exigen estabilidad real en vivo. Programación rápida desde cualquier navegador, sin drivers ni software adicional. Construcción sólida en madera y switches latching de alto desempeño para un control confiable, noche tras noche.",
       cta_contact: "Contactar",
       cta_explore: "Explorar Funciones",
@@ -87,14 +88,15 @@ export const translations = {
   },
   en: {
     nav: {
-      gmc: "GMC-001",
+      home: "Home",
+      gmc: "Features",
       app: "App",
       gallery: "Gallery",
       videos: "Videos",
       contact: "Contact",
     },
     hero: {
-      title: "Precision at your feet with the",
+      title: "Total control with the ",
       subtitle: "A professional MIDI controller designed for musicians who demand real live stability. Fast programming from any browser, no drivers or additional software. Solid wood construction and high-performance latching switches for reliable control, night after night.",
       cta_contact: "Contact Us",
       cta_explore: "Explore Features",

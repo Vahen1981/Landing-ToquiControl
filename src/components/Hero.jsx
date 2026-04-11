@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import gmcWood from '../assets/gmc-wood.png'
+import logo from '../assets/logo2.png';
 
 const Hero = () => {
     const { t } = useLanguage();
@@ -11,17 +12,19 @@ const Hero = () => {
             <div className="hero-glow hero-glow-2"></div>
 
             <div className="container hero-container">
-                <div className="hero-content animate-fade-in">
-                    <h1 className="hero-title">
-                        {t('hero.title')} <br />
-                        <span className="text-gradient">{t('nav.gmc')}</span>
-                    </h1>
-                    <p className="hero-subtitle">
-                        {t('hero.subtitle')}
-                    </p>
-                    <div className="hero-cta">
-                        <a href="#contact" className="btn btn-primary">{t('hero.cta_contact')}</a>
-                        <a href="#features" className="btn btn-secondary">{t('hero.cta_explore')}</a>
+                <div className="hero-text-side animate-fade-in">
+                    <div className="hero-logo-wrapper">
+                        <img src={logo} alt="ToquiControl Logo" className="hero-logo" />
+                    </div>
+
+                    <div className="hero-content">
+                        <p className="hero-subtitle">
+                            {t('hero.subtitle')}
+                        </p>
+                        <div className="hero-cta">
+                            <a href="#contact" className="btn btn-primary">{t('hero.cta_contact')}</a>
+                            <a href="#features" className="btn btn-secondary">{t('hero.cta_explore')}</a>
+                        </div>
                     </div>
                 </div>
 

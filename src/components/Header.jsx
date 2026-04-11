@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Facebook, MessageCircle, Globe } from 'lucide-react';
+import { Menu, Instagram, Facebook, MessageCircle, Globe } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
-import logo from '../assets/logo.png';
+import logo from '../assets/toqui-icon.png';
 
 const Header = ({ onOpenApp }) => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { t, language, toggleLanguage } = useLanguage();
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const handleAppClick = (e) => {
         e.preventDefault();
@@ -23,16 +14,23 @@ const Header = ({ onOpenApp }) => {
     };
 
     return (
-        <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+        <header className="header">
             <div className="container header-container">
-                <a href="#" className="logo">
-                    <img src={logo} alt="ToquiControl Logo" />
-                </a>
+                <div className="logo-wrapper">
+                    <button 
+                        className="logo-btn" 
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <img src={logo} alt="ToquiControl Logo" className="logo-img" />
+                    </button>
+                </div>
 
                 <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
+                    <a href="#home" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.home')}</a>
                     <a href="#features" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gmc')}</a>
-                    <a href="#app-promo" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.app')}</a>
                     <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gallery')}</a>
+                    <a href="#app-promo" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.app')}</a>
                     <a href="#video" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.videos')}</a>
                     <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.contact')}</a>
 
@@ -45,7 +43,7 @@ const Header = ({ onOpenApp }) => {
 
                     <div className="social-links-mobile">
                         <a href="https://instagram.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
-                        <a href="https://facebook.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+                        <a href="https://www.facebook.com/profile.php?id=100087980108747&locale=es_LA" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
                         <a href="https://wa.me/56988170598" target="_blank" rel="noopener noreferrer"><MessageCircle size={20} /></a>
                     </div>
                 </nav>
@@ -60,16 +58,9 @@ const Header = ({ onOpenApp }) => {
 
                     <div className="social-links">
                         <a href="https://instagram.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
-                        <a href="https://facebook.com/toquicontrol" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+                        <a href="https://www.facebook.com/profile.php?id=100087980108747&locale=es_LA" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
                         <a href="https://wa.me/56988170598" target="_blank" rel="noopener noreferrer"><MessageCircle size={20} /></a>
                     </div>
-
-                    <button
-                        className="mobile-menu-btn"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
                 </div>
             </div>
         </header>

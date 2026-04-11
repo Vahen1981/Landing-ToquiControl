@@ -25,9 +25,8 @@ const Footer = ({ onOpenApp }) => {
                         <h4 className="footer-heading">{t('footer.follow')}</h4>
                         <div className="social-icons">
                             <a href="https://instagram.com/toquicontrol" className="social-link" target="_blank" rel="noopener noreferrer"><Instagram size={24} /></a>
-                            <a href="https://facebook.com/toquicontrol" className="social-link" target="_blank" rel="noopener noreferrer"><Facebook size={24} /></a>
+                            <a href="https://www.facebook.com/profile.php?id=100087980108747&locale=es_LA" className="social-link" target="_blank" rel="noopener noreferrer"><Facebook size={24} /></a>
                             <a href="https://wa.me/56988170598" className="social-link" target="_blank" rel="noopener noreferrer"><MessageCircle size={24} /></a>
-                            <a href="mailto:hola@toquicontrol.cl" className="social-link"><Mail size={24} /></a>
                         </div>
                     </div>
                 </div>
