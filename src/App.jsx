@@ -11,7 +11,7 @@ import { translations as sfTranslations } from './i18n/translations-sf';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<LanguageProvider dictionary={defaultTranslations}><HomePage /></LanguageProvider>} />
         <Route path="/gmc-001" element={<LanguageProvider dictionary={gmcTranslations}><GMC001Page /></LanguageProvider>} />
