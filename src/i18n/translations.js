@@ -8,6 +8,21 @@ export const translations = {
       videos: "Videos",
       contact: "Contacto",
     },
+    homeBrand: {
+      title: "Diseñados para el Escenario Real",
+      subtitle: "Controladores MIDI de alto rendimiento construidos en madera. Elije tu producto para explorar.",
+      gmc_card_title: "GMC-001",
+      gmc_card_desc: "Controlador MIDI de 6 switches, ideal para amplificadores y pedales.",
+      sf_card_title: "SuperFoot MIDI",
+      sf_card_desc: "Pedalera MIDI expandida con integración completa de pedales de expresión.",
+      btn: "Ver Producto",
+    },
+    heroSF: {
+      title: "Lleva tu control al siguiente nivel con ",
+      subtitle: "La evolución de ToquiControl. Diseñado para adaptarse a las nuevas tecnologías y exigencias del músico moderno. Controla prácticamente todos los parámetros posibles",
+      cta_contact: "Contactar",
+      cta_explore: "Explorar Funciones",
+    },
     hero: {
       title: "Control total con el ",
       subtitle: "Un controlador MIDI profesional diseñado para músicos que exigen estabilidad real en vivo. Programación rápida desde cualquier navegador, sin drivers ni software adicional. Construcción sólida en madera y switches latching de alto desempeño para un control confiable, noche tras noche.",
@@ -94,6 +109,21 @@ export const translations = {
       gallery: "Gallery",
       videos: "Videos",
       contact: "Contact",
+    },
+    homeBrand: {
+      title: "Designed for the Real Stage",
+      subtitle: "High-performance wooden MIDI controllers. Choose a product to explore.",
+      gmc_card_title: "GMC-001",
+      gmc_card_desc: "6-switch MIDI controller, ideal for amps and pedals.",
+      sf_card_title: "SuperFoot MIDI",
+      sf_card_desc: "Expanded MIDI pedalboard with full expression pedal integration.",
+      btn: "View Product",
+    },
+    heroSF: {
+      title: "Take your control to the next level with ",
+      subtitle: "The evolution of ToquiControl. Designed for complex setups, full expression pedal integration, and flawless visibility under any lighting conditions.",
+      cta_contact: "Contact Us",
+      cta_explore: "Explore Features",
     },
     hero: {
       title: "Total control with the ",

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, Instagram, Facebook, MessageCircle, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import logo from '../assets/toqui-icon.png';
 
-const Header = ({ onOpenApp }) => {
+const Header = ({ onOpenApp, showNavLinks = true, customLogo }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { t, language, toggleLanguage } = useLanguage();
 
@@ -17,22 +18,22 @@ const Header = ({ onOpenApp }) => {
         <header className="header">
             <div className="container header-container">
                 <div className="logo-wrapper">
-                    <button 
-                        className="logo-btn" 
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        <img src={logo} alt="ToquiControl Logo" className="logo-img" />
-                    </button>
+                    <Link to="/" className="logo-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                        <img src={customLogo || logo} alt="Brand Logo" className="logo-img" />
+                    </Link>
                 </div>
 
                 <nav className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
-                    <a href="#home" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.home')}</a>
-                    <a href="#features" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gmc')}</a>
-                    <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gallery')}</a>
-                    <a href="#app-promo" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.app')}</a>
-                    <a href="#video" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.videos')}</a>
-                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.contact')}</a>
+                    {showNavLinks && (
+                        <>
+                            <a href="#home" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.home')}</a>
+                            <a href="#features" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gmc')}</a>
+                            <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gallery')}</a>
+                            <a href="#app-promo" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.app')}</a>
+                            <a href="#video" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.videos')}</a>
+                            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.contact')}</a>
+                        </>
+                    )}
 
                     <div className="lang-switcher-mobile">
                         <button onClick={toggleLanguage} className="lang-btn">

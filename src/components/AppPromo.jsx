@@ -3,7 +3,7 @@ import { ExternalLink, Cpu } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import appCapture from '../assets/app-capture.png';
 
-const AppPromo = ({ onOpenApp }) => {
+const AppPromo = ({ onOpenApp, customImage, urlPath = 'toquicontrol.cl/app' }) => {
     const { t } = useLanguage();
 
     return (
@@ -43,9 +43,9 @@ const AppPromo = ({ onOpenApp }) => {
                                 <div className="browser-dots">
                                     <span></span><span></span><span></span>
                                 </div>
-                                <div className="browser-bar">toquicontrol.cl/app</div>
+                                <div className="browser-bar">{urlPath}</div>
                             </div>
-                            <img src={appCapture} alt="ToquiControl Web App Interface" />
+                            <img src={customImage || appCapture} alt="ToquiControl Web App Interface" />
                             <div className="image-overlay">
                                 <div className="play-button">
                                     <ExternalLink size={32} />

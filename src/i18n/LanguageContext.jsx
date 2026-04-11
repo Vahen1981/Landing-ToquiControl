@@ -3,7 +3,7 @@ import { translations } from './translations';
 
 const LanguageContext = createContext();
 
-export const LanguageProvider = ({ children }) => {
+export const LanguageProvider = ({ children, dictionary }) => {
   // Try to get language from localStorage or default to 'es'
   const [language, setLanguage] = useState(() => {
     return localStorage.getItem('language') || 'es';
@@ -15,7 +15,8 @@ export const LanguageProvider = ({ children }) => {
 
   const t = (key) => {
     const keys = key.split('.');
-    let value = translations[language];
+    const source = dictionary || translations;
+    let value = source[language];
     
     for (const k of keys) {
       if (value && value[k]) {
