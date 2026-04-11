@@ -3,7 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import gmcWood from '../assets/gmc-wood.png'
 import logo from '../assets/logo2.png';
 
-const Hero = () => {
+const Hero = ({ tKey = 'hero', emptyMedia = false, customLogo }) => {
     const { t } = useLanguage();
 
     return (
@@ -14,23 +14,27 @@ const Hero = () => {
             <div className="container hero-container">
                 <div className="hero-text-side animate-fade-in">
                     <div className="hero-logo-wrapper">
-                        <img src={logo} alt="ToquiControl Logo" className="hero-logo" />
+                        <img src={customLogo || logo} alt="Product Logo" className="hero-logo" />
                     </div>
 
                     <div className="hero-content">
                         <p className="hero-subtitle">
-                            {t('hero.subtitle')}
+                            {t(`${tKey}.subtitle`)}
                         </p>
                         <div className="hero-cta">
-                            <a href="#contact" className="btn btn-primary">{t('hero.cta_contact')}</a>
-                            <a href="#features" className="btn btn-secondary">{t('hero.cta_explore')}</a>
+                            <a href="#contact" className="btn btn-primary">{t(`${tKey}.cta_contact`)}</a>
+                            <a href="#features" className="btn btn-secondary">{t(`${tKey}.cta_explore`)}</a>
                         </div>
                     </div>
                 </div>
 
                 <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '0.2s' }}>
                     <div className="hero-image-placeholder">
-                        <img src={gmcWood} alt="GMC-001 MIDI Controller Wood Edition" className="hero-image" />
+                        {!emptyMedia ? (
+                            <img src={gmcWood} alt="GMC-001 MIDI Controller Wood Edition" className="hero-image" />
+                        ) : (
+                            <div className="hero-image" style={{ background: 'rgba(0,0,0,0.2)', width: '100%', aspectRatio: '1/1' }}></div>
+                        )}
                         <div className="image-glow"></div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import img2 from '../assets/02.png';
 import img3 from '../assets/03.png';
 import img4 from '../assets/04.png';
 
-const Gallery = () => {
+const Gallery = ({ emptyMedia = false }) => {
     const { t } = useLanguage();
 
     const images = [
@@ -29,7 +29,11 @@ const Gallery = () => {
                     {images.map((image, index) => (
                         <div key={index} className="gallery-item animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                             <div className="gallery-image-wrapper">
-                                <img src={image.src} alt={image.alt} loading="lazy" />
+                                {!emptyMedia ? (
+                                    <img src={image.src} alt={image.alt} loading="lazy" />
+                                ) : (
+                                    <div style={{ width: '100%', height: '100%', background: 'rgba(0,0,0,0.2)' }}></div>
+                                )}
                             </div>
                         </div>
                     ))}

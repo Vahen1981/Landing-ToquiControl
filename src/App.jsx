@@ -1,84 +1,23 @@
-import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import VideoSection from './components/VideoSection';
-import Gallery from './components/Gallery';
-import AppPromo from './components/AppPromo';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import { Monitor, X } from 'lucide-react';
-import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './i18n/LanguageContext';
+import HomePage from './pages/HomePage';
+import GMC001Page from './pages/GMC001Page';
+import SuperFootMidiPage from './pages/SuperFootMidiPage';
 
-const DeviceWarning = ({ onClose }) => {
-  const { t } = useLanguage();
-  return (
-    <div className="device-warning-overlay">
-      <div className="device-warning-card animate-scale-in">
-        <button className="close-warning" onClick={onClose}>
-          <X size={24} />
-        </button>
-        <div className="warning-icon">
-          <Monitor size={48} />
-        </div>
-        <h2>{t('warning.title')}</h2>
-        <p>
-          {t('warning.p1').split('GMC-001').map((part, i, arr) => (
-            <React.Fragment key={i}>
-              {part}
-              {i < arr.length - 1 && <strong>GMC-001</strong>}
-            </React.Fragment>
-          ))}
-        </p>
-        <p className="warning-note">
-          {t('warning.p2')}
-        </p>
-        <button className="btn btn-primary" onClick={onClose}>
-          {t('warning.btn')}
-        </button>
-      </div>
-    </div>
-  );
-};
+import { translations as defaultTranslations } from './i18n/translations';
+import { translations as gmcTranslations } from './i18n/translations-gmc';
+import { translations as sfTranslations } from './i18n/translations-sf';
 
 function App() {
-  const [showWarning, setShowWarning] = useState(false);
-
-  const isDesktop = () => {
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isMobile =
-      /iphone|ipad|ipod|android|blackberry|mini|windows\sphone|palm|mobile/i.test(
-        userAgent
-      );
-    return !isMobile;
-  };
-
-  const handleOpenApp = () => {
-    if (isDesktop()) {
-      window.location.href = `${import.meta.env.BASE_URL}app/index.html`;
-    } else {
-      setShowWarning(true);
-    }
-  };
-
   return (
-    <LanguageProvider>
-      <div className="app-wrapper">
-        <Header onOpenApp={handleOpenApp} />
-        <main>
-          <Hero />
-          <Features />
-          <Gallery />
-          <AppPromo onOpenApp={handleOpenApp} />
-          <VideoSection />
-          <Contact />
-        </main>
-        <Footer onOpenApp={handleOpenApp} />
-        {showWarning && (
-          <DeviceWarning onClose={() => setShowWarning(false)} />
-        )}
-      </div>
-    </LanguageProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LanguageProvider dictionary={defaultTranslations}><HomePage /></LanguageProvider>} />
+        <Route path="/gmc-001" element={<LanguageProvider dictionary={gmcTranslations}><GMC001Page /></LanguageProvider>} />
+        <Route path="/superfoot-midi" element={<LanguageProvider dictionary={sfTranslations}><SuperFootMidiPage /></LanguageProvider>} />
+      </Routes>
+    </Router>
   );
 }
 

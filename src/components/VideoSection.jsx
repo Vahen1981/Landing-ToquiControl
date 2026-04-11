@@ -9,7 +9,7 @@ import NotesMode from '../assets/NotesMode.mp4';
 import Ensamblaje from '../assets/Ensamblaje.mp4';
 import demoAmplitube from '../assets/demo-amplitube.mp4';
 
-const VideoSection = () => {
+const VideoSection = ({ emptyMedia = false }) => {
     const { t } = useLanguage();
 
     return (
@@ -22,36 +22,44 @@ const VideoSection = () => {
 
                 <div className="video-main animate-fade-in">
                     <div className="video-wrapper">
-                        <video 
-                            width="100%" 
-                            height="auto" 
-                            controls 
-                            loop 
-                            muted 
-                            poster={capture2}
-                            className="local-video"
-                        >
-                            <source src={demo1} type="video/mp4" />
-                            {t('video.no_support')}
-                        </video>
-                    </div>
-                </div>
-
-                <div className="video-secondary animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                    <div className="secondary-video-content">
-                        <div className="video-wrapper">
+                        {!emptyMedia ? (
                             <video 
                                 width="100%" 
                                 height="auto" 
                                 controls 
                                 loop 
                                 muted 
-                                poster={capture5}
+                                poster={capture2}
                                 className="local-video"
                             >
-                                <source src={NotesMode} type="video/mp4" />
+                                <source src={demo1} type="video/mp4" />
                                 {t('video.no_support')}
                             </video>
+                        ) : (
+                            <div style={{ width: '100%', height: '100%', background: 'rgba(0,0,0,0.2)', minHeight: '300px' }}></div>
+                        )}
+                    </div>
+                </div>
+
+                <div className="video-secondary animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                    <div className="secondary-video-content">
+                        <div className="video-wrapper">
+                            {!emptyMedia ? (
+                                <video 
+                                    width="100%" 
+                                    height="auto" 
+                                    controls 
+                                    loop 
+                                    muted 
+                                    poster={capture5}
+                                    className="local-video"
+                                >
+                                    <source src={NotesMode} type="video/mp4" />
+                                    {t('video.no_support')}
+                                </video>
+                            ) : (
+                                <div style={{ width: '100%', height: '100%', background: 'rgba(0,0,0,0.2)', minHeight: '200px' }}></div>
+                            )}
                         </div>
                         <div className="secondary-video-text">
                             <h3>{t('video.mode_notes')} <span className="text-gradient">{t('video.mode_notes_accent')}</span></h3>
@@ -75,36 +83,44 @@ const VideoSection = () => {
                             </p>
                         </div>
                         <div className="video-wrapper">
-                            <video 
-                                width="100%" 
-                                height="auto" 
-                                controls 
-                                loop 
-                                muted 
-                                poster={capture3}
-                                className="local-video"
-                            >
-                                <source src={Ensamblaje} type="video/mp4" />
-                                {t('video.no_support')}
-                            </video>
+                            {!emptyMedia ? (
+                                <video 
+                                    width="100%" 
+                                    height="auto" 
+                                    controls 
+                                    loop 
+                                    muted 
+                                    poster={capture3}
+                                    className="local-video"
+                                >
+                                    <source src={Ensamblaje} type="video/mp4" />
+                                    {t('video.no_support')}
+                                </video>
+                            ) : (
+                                <div style={{ width: '100%', height: '100%', background: 'rgba(0,0,0,0.2)', minHeight: '200px' }}></div>
+                            )}
                         </div>
                     </div>
                 </div>
                 <div className="video-secondary animate-fade-in" style={{ animationDelay: '0.4s', marginTop: '4rem' }}>
                     <div className="secondary-video-content">
                         <div className="video-wrapper">
-                            <video 
-                                width="100%" 
-                                height="auto" 
-                                controls 
-                                loop 
-                                muted 
-                                poster={capture4}
-                                className="local-video"
-                            >
-                                <source src={demoAmplitube} type="video/mp4" />
-                                {t('video.no_support')}
-                            </video>
+                            {!emptyMedia ? (
+                                <video 
+                                    width="100%" 
+                                    height="auto" 
+                                    controls 
+                                    loop 
+                                    muted 
+                                    poster={capture4}
+                                    className="local-video"
+                                >
+                                    <source src={demoAmplitube} type="video/mp4" />
+                                    {t('video.no_support')}
+                                </video>
+                            ) : (
+                                <div style={{ width: '100%', height: '100%', background: 'rgba(0,0,0,0.2)', minHeight: '200px' }}></div>
+                            )}
                         </div>
                         <div className="secondary-video-text">
                             <h3>{t('video.demo_amplitube')} <span className="text-gradient">{t('video.demo_amplitube_accent')}</span></h3>
