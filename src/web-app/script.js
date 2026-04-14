@@ -123,11 +123,11 @@ midiManager.onConnectionStateChange = (connected) => {
     deviceConnected = connected; // Updated variable name to match original var usage if needed, but looks like original arg was shadowing
     if (deviceConnected) {
         stateText.textContent = 'GMC-001: Online';
-        stateImage.style.backgroundImage = 'url(src/Images/Online.png)';
+        stateImage.style.backgroundImage = 'url(src/images/Online.png)';
         deviceOnline = true;
     } else {
         stateText.textContent = 'GMC-001: Offline';
-        stateImage.style.backgroundImage = 'url(src/Images/Offline.png)';
+        stateImage.style.backgroundImage = 'url(src/images/Offline.png)';
         deviceOnline = false;
     }
 };
