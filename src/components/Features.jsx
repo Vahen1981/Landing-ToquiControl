@@ -1,6 +1,7 @@
 import React from 'react';
 import { Settings, Zap, Repeat, Shield, Sliders, Smartphone } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import '../styles/components/Features.css';
 
 const Features = () => {
     const { t } = useLanguage();

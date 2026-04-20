@@ -9,6 +9,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { Monitor, X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import '../styles/components/DeviceWarning.css';
 
 const DeviceWarning = ({ onClose }) => {
   const { t } = useLanguage();

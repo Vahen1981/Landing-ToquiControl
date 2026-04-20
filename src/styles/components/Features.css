@@ -1,0 +1,47 @@
+/* Features Section */
+.features {
+    background-color: var(--bg-darker);
+    position: relative;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.feature-icon {
+    margin-bottom: 1.5rem;
+}
+
+.text-primary {
+    color: var(--accent-primary);
+}
+
+.text-secondary {
+    color: var(--accent-secondary);
+}
+
+.feature-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-desc {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import '../styles/components/Contact.css';
 
 const Contact = () => {
     const { t } = useLanguage();

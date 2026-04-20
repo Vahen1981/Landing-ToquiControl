@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Mouse Memoirs';
+    src: url('../assets/fonts/MouseMemoirs-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Wood aesthetic theme colors */
+    --bg-darker: #1a120b;
+    /* Deep wood brown */
+    --bg-dark: #2c1e12;
+    /* Chocolate brown */
+    --bg-card: #3d2b1f;
+    /* Coffee brown */
+    --bg-card-hover: #4d3728;
+    /* Warm oak */
+
+    /* Wood Accents */
+    --accent-primary: #d4a373;
+    /* Tan / Natural wood */
+    --accent-primary-glow: rgba(212, 163, 115, 0.4);
+    --accent-secondary: #faedcd;
+    /* Cream / Parchment */
+    --accent-secondary-glow: rgba(250, 237, 205, 0.4);
+
+    /* Text colors */
+    --text-main: #fefae0;
+    /* Cream / Ivory */
+    --text-muted: #d4a373;
+    /* Tan */
+
+    /* Layout variables */
+    --max-width: 1200px;
+    --header-height: 60px;
+
+    /* Font Families */
+    --font-heading: 'Mouse Memoirs', sans-serif;
+    --font-body: 'Mouse Memoirs', sans-serif;
+    /* Logo Sizing */
+    --logo-height: 40px;
+    --footer-logo-height: 50px;
+}
+
+/* Neutral Aesthetic */
+.theme-neutral {
+    --bg-darker: #0a0a0c;
+    --bg-dark: #121214;
+    --bg-card: #1c1c1f;
+    --bg-card-hover: #26262a;
+    --accent-primary: #a0a0a0;
+    --accent-primary-glow: rgba(160, 160, 160, 0.4);
+    --accent-secondary: #e0e0e0;
+    --accent-secondary-glow: rgba(224, 224, 224, 0.4);
+    --text-main: #f0f0f0;
+    --text-muted: #9e9e9e;
+}
+
+/* SuperFoot MIDI Red Aesthetic */
+.theme-superfoot {
+    --bg-darker: #1a0b0b;
+    --bg-dark: #2c1212;
+    --bg-card: #3d1f1f;
+    --bg-card-hover: #4d2828;
+    --accent-primary: #e65a5a;
+    --accent-primary-glow: rgba(230, 90, 90, 0.4);
+    --accent-secondary: #ffb3b3;
+    --accent-secondary-glow: rgba(255, 179, 179, 0.4);
+    --text-main: #ffeeee;
+    --text-muted: #d48c8c;
+    --btn-gradient-end: #b33939;
+    --btn-text: #1a0b0b;
+    --nav-mobile-bg: rgba(26, 11, 11, 0.98);
+}

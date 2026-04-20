@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import gmcWood from '../assets/gmc-wood.png'
 import logo from '../assets/logo2.png';
+import '../styles/components/Hero.css';
 
 const Hero = ({ tKey = 'hero', emptyMedia = false, customLogo }) => {
     const { t } = useLanguage();

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Cpu } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import '../styles/components/AppPromo.css';
 import appCapture from '../assets/app-capture.png';
 
 const AppPromo = ({ onOpenApp, customImage, urlPath = 'toquicontrol.cl/app' }) => {

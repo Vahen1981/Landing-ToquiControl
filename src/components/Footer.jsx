@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Facebook, Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import '../styles/components/Footer.css';
 import logo from '../assets/logo.png';
 
 const Footer = ({ onOpenApp }) => {

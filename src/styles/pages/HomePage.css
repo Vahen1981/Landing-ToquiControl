@@ -1,0 +1,86 @@
+/* Brand Cards (Home Page) */
+.brand-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.brand-card.sf-card:hover {
+    box-shadow: 0 15px 35px rgba(230, 90, 90, 0.15);
+}
+
+.brand-card-content h2 {
+    font-size: 2.2rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-main);
+}
+
+.brand-card-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.home-brand-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.hero-brand-logo {
+    width: 40%;
+}
+
+.brand-logo-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+}
+
+.hero-brand-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.hero-brand-text .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.hero-brand-text .section-subtitle {
+    opacity: 0.8;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .home-brand-hero {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-brand-logo,
+    .hero-brand-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}

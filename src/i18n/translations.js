@@ -2,6 +2,9 @@ export const translations = {
   es: {
     nav: {
       home: "Inicio",
+      products: "Productos",
+      gmc_name: "GMC-001",
+      sf_name: "SuperFoot MIDI",
       gmc: "Características",
       app: "App",
       gallery: "Galería",
@@ -9,12 +12,12 @@ export const translations = {
       contact: "Contacto",
     },
     homeBrand: {
-      title: "Diseñados para el Escenario Real",
-      subtitle: "Controladores MIDI de alto rendimiento construidos en madera. Elije tu producto para explorar.",
-      gmc_card_title: "GMC-001",
-      gmc_card_desc: "Controlador MIDI de 6 switches, ideal para amplificadores y pedales.",
+      title: "Domina tu Sonido",
+      subtitle: "Controladores MIDI de alta performance, desarrollados para músicos profesionales que requieren precisión y control absoluto de su configuración. Conoce nuestra línea de productos y experimenta el universo ToquiControl.",
+      gmc_card_title: "ToquiControl GMC-001",
+      gmc_card_desc: "Controlador MIDI fabricado en madera. 3 switches de control, 2 switches de navegación por bancos y 1 switch selector de modo. Controla la mayoría de los dispositivos MIDI del mercado.",
       sf_card_title: "SuperFoot MIDI",
-      sf_card_desc: "Pedalera MIDI expandida con integración completa de pedales de expresión.",
+      sf_card_desc: "10 poderosos switches que abarcan casi todas las posibilidades de control midi. Desde los clásicos controles de presets hasta complejos métodos, como la selección de escenas en fractal o el envío de multiples controladores CC. Totalmente configurable por el usuario a través de la Web App.",
       btn: "Ver Producto",
     },
     heroSF: {
@@ -104,6 +107,9 @@ export const translations = {
   en: {
     nav: {
       home: "Home",
+      products: "Products",
+      gmc_name: "GMC-001",
+      sf_name: "SuperFoot MIDI",
       gmc: "Features",
       app: "App",
       gallery: "Gallery",
@@ -111,12 +117,12 @@ export const translations = {
       contact: "Contact",
     },
     homeBrand: {
-      title: "Designed for the Real Stage",
-      subtitle: "High-performance wooden MIDI controllers. Choose a product to explore.",
-      gmc_card_title: "GMC-001",
-      gmc_card_desc: "6-switch MIDI controller, ideal for amps and pedals.",
+      title: "Master Your Sound",
+      subtitle: "High-performance MIDI controllers, developed for professional musicians who demand precision and absolute control over their setup. Explore our product line and experience the ToquiControl universe.",
+      gmc_card_title: "ToquiControl GMC-001",
+      gmc_card_desc: "MIDI controller crafted from wood. 3 control switches, 2 bank navigation switches, and 1 mode selector switch. Control most MIDI devices on the market.",
       sf_card_title: "SuperFoot MIDI",
-      sf_card_desc: "Expanded MIDI pedalboard with full expression pedal integration.",
+      sf_card_desc: "10 powerful switches covering nearly all MIDI control possibilities. From classic preset controls to complex methods such as scene selection in Fractal devices or sending multiple CC controllers. Fully user-configurable through the Web App.",
       btn: "View Product",
     },
     heroSF: {

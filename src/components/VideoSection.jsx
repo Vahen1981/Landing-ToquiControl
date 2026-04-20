@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import '../styles/components/VideoSection.css';
 import capture2 from '../assets/capture2.png';
 import capture5 from '../assets/capture5.png';
 import capture3 from '../assets/capture3.png';
