@@ -55,7 +55,7 @@ const GMC001Page = () => {
 
   const handleOpenApp = () => {
     if (isDesktop()) {
-      window.open(`${import.meta.env.BASE_URL}app/index.html`, '_blank');
+      window.open(`${import.meta.env.BASE_URL}gmc-app/index.html`, '_blank');
     } else {
       setShowWarning(true);
     }

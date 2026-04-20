@@ -4,7 +4,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import '../styles/components/AppPromo.css';
 import appCapture from '../assets/app-capture.png';
 
-const AppPromo = ({ onOpenApp, customImage, urlPath = 'toquicontrol.cl/app' }) => {
+const AppPromo = ({ onOpenApp, customImage, urlPath = 'toquicontrol.cl/gmc-app' }) => {
     const { t } = useLanguage();
 
     return (

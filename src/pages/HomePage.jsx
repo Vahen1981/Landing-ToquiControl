@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <>
       <Header showNavLinks={true} onOpenApp={() => {
-        window.open(`${import.meta.env.BASE_URL}app/index.html`, '_blank');
+        window.open(`${import.meta.env.BASE_URL}gmc-app/index.html`, '_blank');
       }} />
       
       <div className="app-wrapper theme-neutral animate-fade-in" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -39,7 +39,7 @@ const HomePage = () => {
         </div>
       </main>
 
-      <Footer onOpenApp={() => window.open(`${import.meta.env.BASE_URL}app/index.html`, '_blank')} />
+      <Footer onOpenApp={() => window.open(`${import.meta.env.BASE_URL}gmc-app/index.html`, '_blank')} />
     </div>
     </>
   );

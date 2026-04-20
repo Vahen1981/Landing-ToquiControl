@@ -14,7 +14,7 @@ import sfCapture from '../assets/app-capture-superfoot.png';
 
 const SuperFootMidiPage = () => {
   const handleOpenApp = () => {
-    window.open(`${import.meta.env.BASE_URL}app-sf/index.html`, '_blank');
+    window.open(`${import.meta.env.BASE_URL}superfoot-app/index.html`, '_blank');
   };
 
   return (
@@ -25,7 +25,7 @@ const SuperFootMidiPage = () => {
           <Hero emptyMedia={true} customLogo={logo}/>
           <Features />
           <Gallery emptyMedia={true} />
-          <AppPromo onOpenApp={handleOpenApp} customImage={sfCapture} urlPath="toquicontrol.cl/app-sf" />
+          <AppPromo onOpenApp={handleOpenApp} customImage={sfCapture} urlPath="toquicontrol.cl/superfoot-app" />
           <VideoSection emptyMedia={true} />
         </main>
         <Footer onOpenApp={handleOpenApp} />
