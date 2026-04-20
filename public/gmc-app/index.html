@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/Landing-ToquiControl/superfoot-app/toqui-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMC-001 Programmer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popUpStyle.css">
+    <link rel="stylesheet" href="noteStyle.css">
+</head>
+
+<body>
+    <header>
+        <div id="main-logo"></div>
+        <div id="right-container">
+            <div id="right-left">
+                <div id="info-title-box">Current config</div>
+                <div id="info-box">
+                    <div class="info-boxes" id="info-box-l">Note Mode:</div>
+                    <div class="info-boxes" id="info-box-note"></div>
+                    <div class="info-boxes" id="info-box-l">Channel:</div>
+                    <div class="info-boxes" id="info-box-channel"></div>
+                </div>
+            </div>
+            <div id="right-right">
+                <div id="up-up">
+                    <p id="state-text">Device offline</p>
+                    <div id="state-img"></div>
+                </div>
+                <div id="up-center">
+                    <p id="enable-note-text">Enable / Disable note mode</p>
+                </div>
+                <div id="up-down">
+                    <select id="select-enable">
+                        <option value=""></option>
+                        <option value="0">Disable</option>
+                        <option value="1">Enable</option>
+                    </select>
+                    <button class="buttons" id="note-button">Send</button>
+                </div>
+                <div id="up-center">
+                    <p id="enable-note-text">Midi Channel(general)</p>
+                </div>
+                <div id="up-down">
+                    <select id="select-channel-general">
+                        <option value=""></option>
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                        <option value="4">5</option>
+                        <option value="5">6</option>
+                        <option value="6">7</option>
+                        <option value="7">8</option>
+                        <option value="8">9</option>
+                        <option value="9">10</option>
+                        <option value="10">11</option>
+                        <option value="11">12</option>
+                        <option value="12">13</option>
+                        <option value="13">14</option>
+                        <option value="14">15</option>
+                        <option value="15">16</option>
+                    </select>
+                    <button class="buttons" id="channel-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="device">
+        <div id="lcd">
+            <div class="lcd-text-container">
+                <p class="lcd-text" id="0"></p>
+                <p class="lcd-text" id="1"></p>
+                <p class="lcd-text" id="2"></p>
+                <p class="lcd-text" id="3"></p>
+                <p class="lcd-text" id="4"></p>
+                <p class="lcd-text" id="5"></p>
+                <p class="lcd-text" id="6"></p>
+                <p class="lcd-text" id="7"></p>
+                <p class="lcd-text" id="8"></p>
+                <p class="lcd-text" id="9"></p>
+                <p class="lcd-text" id="10"></p>
+                <p class="lcd-text" id="11"></p>
+                <p class="lcd-text" id="12"></p>
+                <p class="lcd-text" id="13"></p>
+                <p class="lcd-text" id="14"></p>
+                <p class="lcd-text" id="15"></p>
+            </div>
+            <div class="lcd-text-container">
+                <p class="lcd-text" id="16"></p>
+                <p class="lcd-text" id="17"></p>
+                <p class="lcd-text" id="18"></p>
+                <p class="lcd-text" id="19"></p>
+                <p class="lcd-text" id="20"></p>
+                <p class="lcd-text" id="21"></p>
+                <p class="lcd-text" id="22"></p>
+                <p class="lcd-text" id="23"></p>
+                <p class="lcd-text" id="24"></p>
+                <p class="lcd-text" id="25"></p>
+                <p class="lcd-text" id="26"></p>
+                <p class="lcd-text" id="27"></p>
+                <p class="lcd-text" id="28"></p>
+                <p class="lcd-text" id="29"></p>
+                <p class="lcd-text" id="30"></p>
+                <p class="lcd-text" id="31"></p>
+            </div>
+        </div>
+        <div id="led-mode-pc"></div>
+        <div id="led-mode-cc"></div>
+        <div id="pedal-mode"></div>
+        <div id="led-up"></div>
+        <div id="pedal-up"></div>
+        <div id="led-a"></div>
+        <div id="pedal-a"></div>
+        <div id="led-b"></div>
+        <div id="pedal-b"></div>
+        <div id="led-c"></div>
+        <div id="pedal-c"></div>
+        <div id="led-down"></div>
+        <div id="pedal-down"></div>
+    </div>
+
+    <!-- Floating Back Button -->
+    <button id="floating-back-button"
+        style="position: fixed; bottom: 30px; right: 30px; background-color: #d4a373; color: #1a120b; border: none; border-radius: 20px; padding: 8px 16px; font-size: 14px; font-family: 'Trebuchet MS', sans-serif; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; gap: 6px; transition: all 0.3s ease; font-weight: bold;">
+        <span style="font-size: 16px;">←</span>Back
+    </button>
+
+    <!-- Dependencies -->
+    <script src="midi-manager.js"></script>
+    <script src="midi-constants.js"></script>
+
+    <!-- App Logic -->
+    <script src="led.js"></script>
+    <script src="noteHtml.js"></script>
+    <script src="chordBuilder.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById('floating-back-button').addEventListener('click', () => {
+            window.location.href = '../';
+        });
+
+        document.getElementById('floating-back-button').addEventListener('mouseover', function () {
+            this.style.transform = 'scale(1.05)';
+        });
+        document.getElementById('floating-back-button').addEventListener('mouseout', function () {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+
+</html>
