@@ -5,7 +5,6 @@ import Features from '../components/Features';
 import Gallery from '../components/Gallery';
 import AppPromo from '../components/AppPromo';
 import VideoSection from '../components/VideoSection';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { Monitor, X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -19,18 +18,19 @@ const SuperFootMidiPage = () => {
   };
 
   return (
-    <div className="app-wrapper animate-fade-in theme-superfoot">
+    <>
       <Header onOpenApp={handleOpenApp} showNavLinks={true} />
-      <main>
-        <Hero emptyMedia={true} customLogo={logo}/>
-        <Features />
-        <Gallery emptyMedia={true} />
-        <AppPromo onOpenApp={handleOpenApp} customImage={sfCapture} urlPath="toquicontrol.cl/app-sf" />
-        <VideoSection emptyMedia={true} />
-        <Contact />
-      </main>
-      <Footer onOpenApp={handleOpenApp} />
-    </div>
+      <div className="app-wrapper animate-fade-in theme-superfoot">
+        <main>
+          <Hero emptyMedia={true} customLogo={logo}/>
+          <Features />
+          <Gallery emptyMedia={true} />
+          <AppPromo onOpenApp={handleOpenApp} customImage={sfCapture} urlPath="toquicontrol.cl/app-sf" />
+          <VideoSection emptyMedia={true} />
+        </main>
+        <Footer onOpenApp={handleOpenApp} />
+      </div>
+    </>
   );
 };
 

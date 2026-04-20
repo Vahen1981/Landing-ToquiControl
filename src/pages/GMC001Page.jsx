@@ -5,7 +5,6 @@ import Features from '../components/Features';
 import Gallery from '../components/Gallery';
 import AppPromo from '../components/AppPromo';
 import VideoSection from '../components/VideoSection';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { Monitor, X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -63,21 +62,22 @@ const GMC001Page = () => {
   };
 
   return (
-    <div className="app-wrapper animate-fade-in">
+    <>
       <Header onOpenApp={handleOpenApp} showNavLinks={true} />
-      <main>
-        <Hero />
-        <Features />
-        <Gallery />
-        <AppPromo onOpenApp={handleOpenApp} />
-        <VideoSection />
-        <Contact />
-      </main>
-      <Footer onOpenApp={handleOpenApp} />
-      {showWarning && (
-        <DeviceWarning onClose={() => setShowWarning(false)} />
-      )}
-    </div>
+      <div className="app-wrapper animate-fade-in">
+        <main>
+          <Hero />
+          <Features />
+          <Gallery />
+          <AppPromo onOpenApp={handleOpenApp} />
+          <VideoSection />
+        </main>
+        <Footer onOpenApp={handleOpenApp} />
+        {showWarning && (
+          <DeviceWarning onClose={() => setShowWarning(false)} />
+        )}
+      </div>
+    </>
   );
 };
 

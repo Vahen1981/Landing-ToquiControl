@@ -22,10 +22,6 @@ const Hero = ({ tKey = 'hero', emptyMedia = false, customLogo }) => {
                         <p className="hero-subtitle">
                             {t(`${tKey}.subtitle`)}
                         </p>
-                        <div className="hero-cta">
-                            <a href="#contact" className="btn btn-primary">{t(`${tKey}.cta_contact`)}</a>
-                            <a href="#features" className="btn btn-secondary">{t(`${tKey}.cta_explore`)}</a>
-                        </div>
                     </div>
                 </div>
 

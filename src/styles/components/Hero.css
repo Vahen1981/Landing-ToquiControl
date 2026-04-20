@@ -1,10 +1,11 @@
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     padding-top: var(--header-height);
+    padding-bottom: 2rem;
     overflow: hidden;
 }
 
@@ -96,11 +97,6 @@
     color: var(--text-muted);
     margin-bottom: 2.5rem;
     max-width: 90%;
-}
-
-.hero-cta {
-    display: flex;
-    gap: 1rem;
 }
 
 .hero-image-placeholder {

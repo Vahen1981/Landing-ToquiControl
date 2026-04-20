@@ -2,6 +2,9 @@ export const translations = {
   es: {
     nav: {
       home: "Inicio",
+      products: "Productos",
+      gmc_name: "GMC-001",
+      sf_name: "SuperFoot MIDI",
       gmc: "Características",
       app: "App",
       gallery: "Galería",
@@ -89,6 +92,9 @@ export const translations = {
   en: {
     nav: {
       home: "Home",
+      products: "Products",
+      gmc_name: "GMC-001",
+      sf_name: "SuperFoot MIDI",
       gmc: "Features",
       app: "App",
       gallery: "Gallery",
