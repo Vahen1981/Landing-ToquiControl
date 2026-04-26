@@ -1,5 +1,3 @@
-// [WEB CONVERSION] Electron dependency removed
-// const { ipcRenderer } = require('electron');
 const midiManager = new MidiManager();
 const patchText = document.getElementById('23');
 const btnUp = document.getElementById('pedal-up');
@@ -34,6 +32,7 @@ const noteEnableButton = document.getElementById('note-button');
 const noteEnableSelect = document.getElementById('select-enable');
 const channelButton = document.getElementById('channel-button');
 const channelSelectGeneral = document.getElementById('select-channel-general');
+const factoryResetButton = document.getElementById('factory-reset-button');
 let enableDisable = 0;
 let midiChannel = 0;
 noteEnableButton.disabled = true;
@@ -58,14 +57,12 @@ noteEnableButton.addEventListener('click', function() {
                             .concat(sysexNoteEnabling)
                             .concat(enableDisable)
                             .concat(sysexEnd);
-        // ipcRenderer.send('send-sysex', arrayToSend);
         midiManager.sendSysex(arrayToSend);
         const askEnabled = sysexHeader
                             .concat(sysexRequest)
                             .concat(sysexNoteEnabling)
                             .concat(sysexEnd);
         setTimeout(() => {
-            // ipcRenderer.send('send-sysex', askEnabled);
             midiManager.sendSysex(askEnabled);
         }, 100);    
         noteEnableSelect.selectedIndex = 0;
@@ -98,7 +95,6 @@ channelButton.addEventListener('click', function() {
                             .concat(sysexChannel)
                             .concat(midiChannel)
                             .concat(sysexEnd);
-        // ipcRenderer.send('send-sysex', arrayToSend);
         midiManager.sendSysex(arrayToSend);
         const askChannel = sysexHeader
                             .concat(sysexRequest)
@@ -116,6 +112,24 @@ channelButton.addEventListener('click', function() {
         infoWindow('GMC-001 offline, please connect the device and retry', 'warn');
     }
 });
+
+factoryResetButton.addEventListener('click', function() {
+    if (!deviceOnline) {
+        infoWindow('GMC-001 offline, please connect the device and retry', 'warn');
+        return;
+    }
+    const sysexToSend = createFactoryResetSysex();
+    midiManager.sendSysex(sysexToSend);
+    infoWindow('Factory reset command sent. Restarting the GMC-001', 'info');
+});
+
+function createFactoryResetSysex() {
+    return sysexHeader
+                .concat(sysexProg)
+                .concat(sysexFactoryByte)
+                .concat(sysexEnd);
+}
+
 // [WEB CONVERSION] Replaced ipcRenderer.on('connection-state')
 midiManager.onConnectionStateChange = (connected) => {
     const stateText = document.getElementById('state-text');
@@ -123,11 +137,11 @@ midiManager.onConnectionStateChange = (connected) => {
     deviceConnected = connected; // Updated variable name to match original var usage if needed, but looks like original arg was shadowing
     if (deviceConnected) {
         stateText.textContent = 'GMC-001: Online';
-        stateImage.style.backgroundImage = 'url(src/Images/Online.png)';
+        stateImage.style.backgroundImage = 'url(src/images/Online.png)';
         deviceOnline = true;
     } else {
         stateText.textContent = 'GMC-001: Offline';
-        stateImage.style.backgroundImage = 'url(src/Images/Offline.png)';
+        stateImage.style.backgroundImage = 'url(src/images/Offline.png)';
         deviceOnline = false;
     }
 };
@@ -240,7 +254,6 @@ function warnWindow(text){
                             .concat(sysexProg)
                             .concat(sysexFactoryByte)
                             .concat(sysexEnd);
-        // ipcRenderer.send('send-sysex', sysexToSend);
         midiManager.sendSysex(sysexToSend);
         infoPopUP.parentNode.removeChild(infoPopUP);
         backgroundBlur.parentNode.removeChild(backgroundBlur);
@@ -563,7 +576,6 @@ function createPcPopUp(bank, pedal, value) {
                                .concat(pedalCalculator(pedal))
                                .concat(selectedValue)
                                .concat(sysexEnd);
-            // ipcRenderer.send('send-sysex', arrayToSend);
             midiManager.sendSysex(arrayToSend);
         }
         if(mode === 'CC Mode'){
@@ -573,7 +585,6 @@ function createPcPopUp(bank, pedal, value) {
                                .concat(pedalCalculator(pedal))
                                .concat(selectedValue)
                                .concat(sysexEnd);
-            // ipcRenderer.send('send-sysex', arrayToSend);
             midiManager.sendSysex(arrayToSend);                   
         }
         if(mode === 'Loop Mode'){
@@ -751,6 +762,8 @@ function noteArrayCreator(bank, patch){
             if(noteByNote[i].selectedIndex === 0){
                 octave[i].disabled = true;
                 notes[i] = undefined;
+                noteArray[i] = undefined;
+                arrayValidate(noteArray, channelSelected, progButton);
             }
             else if(noteByNote[i].selectedIndex === 1){
                 octave[i].disabled = true;
@@ -769,6 +782,8 @@ function noteArrayCreator(bank, patch){
         octave[i].addEventListener('change', function(){
             if(octave[i].selectedIndex === 0){
                 octaves[i] = undefined;
+                noteArray[i] = undefined;
+                arrayValidate(noteArray, channelSelected, progButton);
             }
             else{
                 octaves[i] = octave[i].selectedIndex -1;
@@ -794,9 +809,7 @@ function noteArrayCreator(bank, patch){
                             .concat(channelSelected)
                             .concat(noteArray)
                             .concat(sysexEnd);
-        // ipcRenderer.send('send-sysex', arrayToSend);
         midiManager.sendSysex(arrayToSend);
-        // console.log(arrayToSend.map(byte => byte.toString(16).padStart(2, '0')).join(' '));
         channelSelected = undefined;
         noteArray.forEach((element, index) => noteArray[index] = undefined);
         noteByNote.forEach((element, index) => noteByNote[index].value = '');

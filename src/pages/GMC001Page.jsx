@@ -54,11 +54,12 @@ const GMC001Page = () => {
   };
 
   const handleOpenApp = () => {
-    if (isDesktop()) {
-      window.open(`${import.meta.env.BASE_URL}gmc-app/index.html`, '_blank');
-    } else {
+    // Temporally disabled restriction
+    /*if (isDesktop()) {*/
+    window.open(`${import.meta.env.BASE_URL}gmc-app/index.html`, '_blank');
+    /*} else {
       setShowWarning(true);
-    }
+    }*/
   };
 
   return (
