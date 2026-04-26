@@ -27,7 +27,6 @@ class MidiManager {
         }
         try {
             this.midiAccess = await navigator.requestMIDIAccess({ sysex: true });
-            console.log('MIDI Access GRANTED');
             
             this.midiAccess.onstatechange = (e) => {
                 this.checkConnection();
@@ -35,7 +34,6 @@ class MidiManager {
             
             this.checkConnection();
         } catch (err) {
-            console.error('MIDI Access DENIED', err);
             // alert('MIDI Access Denied. This app requires MIDI permissions to work.');
         }
     }
@@ -74,7 +72,6 @@ class MidiManager {
         // Only trigger change if state actually changed
         if (newConnectionState !== this.isConnected) {
             this.isConnected = newConnectionState;
-            console.log('Device Connection State:', this.isConnected);
             if (this.onConnectionStateChange) {
                 this.onConnectionStateChange(this.isConnected);
             }
@@ -89,13 +86,11 @@ class MidiManager {
     sendSysex(data) {
         if (this.output && this.isConnected) {
             this.output.send(data);
-        } else {
-            console.warn('Cannot send Sysex: Device not connected');
         }
     }
     handleMidiMessage(event) {
         const message = Array.from(event.data);
-        
+
         if (this.isToquiInfoMessage(message)) {
             // Sysex Program Change or Control Change
             if (message[5] === this.sysexProgramChange || message[5] === this.sysexControlChange) {

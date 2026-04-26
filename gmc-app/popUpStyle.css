@@ -1,4 +1,4 @@
-#info-pop-up{
+#info-pop-up {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,17 +7,16 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.692);
-    background-image: url('src/images/fondo.jpg');
-    border: solid 1px rgb(0, 225, 255);
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.822);
-    width: 500px;
-    height: 200px;
+    background-color: rgba(0, 0, 0, 0.688);
+    border: solid 0.1025cqw rgb(0, 225, 255);
+    border-radius: 3.0738cqw;
+    box-shadow: 1.0246cqw 1.0246cqw 2.0492cqw rgba(0, 0, 0, 0.822);
+    width: 51.2295cqw;
+    height: 20.4918cqw;
     z-index: 10;
 }
 
-#info-text{
+#info-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,119 +24,120 @@
     text-align: center;
     color: rgb(0, 225, 255);
     font-family: 'Trebuchet MS';
-    font-size: 18px;
+    font-size: 1.8443cqw;
     margin-right: 0;
-    height: 80px;
-    width: 400px;
+    height: 8.1967cqw;
+    width: 40.9836cqw;
 }
 
-#progress{
+#progress {
     background-color: white;
-    width: 300px;
-    height: 10px;
-    border: solid 2px black;
-    border-radius: 2px;
+    width: 30.7377cqw;
+    height: 1.0246cqw;
+    border: solid 0.2049cqw black;
+    border-radius: 0.2049cqw;
 }
 
-#btn-container{
+#btn-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 250px;
-    height: 35px;
-    margin-bottom: 30px;
+    width: 25.6148cqw;
+    height: 3.5861cqw;
+    margin-bottom: 3.0738cqw;
 }
 
-.option{
-    width: 80px;
-    height: 30px;
+.option {
+    width: 8.1967cqw;
+    height: 3.0738cqw;
     color: white;
-    font-size: 12px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.438);
-    border-radius: 7px;
+    font-size: 1.2295cqw;
+    box-shadow: 0 0 0.2049cqw 0.2049cqw rgba(0, 0, 0, 0.438);
+    border-radius: 0.7172cqw;
     background-color: rgb(226, 0, 0);
 }
 
-#info-logo{
-    /* background-image: url('src/images/logogris.png'); */
+#info-logo {
     background-size: contain;
-    width: 115px;
-    height: 50px;
+    width: 11.7828cqw;
+    height: 5.1230cqw;
 }
 
-#black-white{
-    position:absolute;
-    backdrop-filter: blur(2px);
-    width: 976px;
-    height: 640px;
+#black-white {
+    position: absolute;
+    backdrop-filter: blur(0.2049cqw);
+    width: 100cqw;
+    height: 65.5738cqw;
     z-index: 3;
 }
 
-#pop-up-pc{
+#pop-up-pc {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 250px;
-    background-image: url('src/images/fondo.jpg');
-    border-radius: 25px;
-    box-shadow: 40px 40px 40px 40px rgba(0, 0, 0, 0.521);
-    border: 3px solid rgb(0, 0, 0);
+    width: 51.2295cqw;
+    height: 25.6148cqw;
+    background-color: rgba(0, 0, 0, 0.688);
+    border-radius: 2.5615cqw;
+    box-shadow: 4.0984cqw 4.0984cqw 4.0984cqw 4.0984cqw rgba(0, 0, 0, 0.521);
+    border: 0.3074cqw solid rgb(0, 0, 0);
     z-index: 10;
 }
 
-#pop-up-cc{
+#pop-up-cc {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 250px;
-    background-image: url('src/images/fondo.jpg');
-    border-radius: 25px;
-    box-shadow: 40px 40px 40px 40px rgba(0, 0, 0, 0.521);
-    border: 3px solid rgb(0, 0, 0);
+    width: 51.2295cqw;
+    height: 25.6148cqw;
+    background-color: rgba(0, 0, 0, 0.688);
+    border-radius: 2.5615cqw;
+    box-shadow: 4.0984cqw 4.0984cqw 4.0984cqw 4.0984cqw rgba(0, 0, 0, 0.521);
+    border: 0.3074cqw solid rgb(0, 0, 0);
     z-index: 10;
 }
 
-.pop-up-header{
+.pop-up-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 50px;
+    margin-left: 2.0492cqw;
+    margin-right: 2.0492cqw;
+    height: 5.1230cqw;
 }
 
-.pop-up-title{
+.pop-up-title {
     font-family: 'Trebuchet MS';
-    font-size: 18px;
+    font-size: 1.8443cqw;
     color: rgb(255, 255, 255);
-    margin-left: 10px;
+    margin-left: 1.0246cqw;
 }
 
 .close {
     font-family: 'Trebuchet MS';
-    font-size: 18px;
-    width: 25px;
-    height: 25px;
+    font-size: 1.8443cqw;
+    width: 2.5615cqw;
+    height: 2.5615cqw;
     color: white;
     text-align: center;
     background-color: rgb(226, 0, 0);
-    border-radius: 5px;
-    user-select: none;  /* Desactiva la selección de texto */
+    border-radius: 0.5123cqw;
+    user-select: none;
+    /* Desactiva la selección de texto */
     cursor: default;
 }
 
 .close:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.733); /* Sombreado al pasar el mouse */
+    box-shadow: 0 0 1.0246cqw rgba(0, 0, 0, 0.733);
+    /* Sombreado al pasar el mouse */
     background-color: rgb(255, 61, 61);
 }
 
-.pop-up-content{
+.pop-up-content {
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -146,97 +146,116 @@
     height: 100%;
 }
 
-.sub-pop-content{
+.sub-pop-content {
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 20px;
+    border: 0.1025cqw solid black;
+    border-radius: 2.0492cqw;
     background-color: rgba(0, 0, 0, 0.212);
-    width: 340px;
-    height: 100px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    width: 34.8361cqw;
+    height: 10.2459cqw;
+    margin-top: 1.0246cqw;
+    margin-bottom: 1.5369cqw;
 }
 
-.target-text{
+.target-text {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: 'Trebuchet MS';
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 1.4344cqw;
+    letter-spacing: 0.1025cqw;
     color: white;
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
+    width: 30.7377cqw;
+    height: 3.0738cqw;
+    margin-top: 1.0246cqw;
 }
 
-#current-cfg{
+#current-cfg {
     position: absolute;
-    right: 100px;
-    top: 70px;
+    right: 10.2459cqw;
+    top: 7.1721cqw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Trebuchet MS';
-    font-size: 11px;
+    font-size: 1.1270cqw;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.781);
-    border-radius: 10px;
-    border: solid 1px black;
+    border-radius: 1.0246cqw;
+    border: solid 0.1025cqw black;
     color: #31aed4;
-    width: 120px;
-    height: 30px;;
+    width: 12.2951cqw;
+    height: 3.0738cqw;
+    ;
 }
 
-.cfg-container{
+.cfg-container {
     display: flex;
-    width: 300px;
-    height: 40px;
+    width: 30.7377cqw;
+    height: 4.0984cqw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.param-title{
+.param-title {
     font-family: 'Trebuchet MS';
-    font-size: 14px;
+    font-size: 1.4344cqw;
     color: white;
 }
 
-#select-pc{
-    border: solid 3px black;
-    border-radius: 10px;
-    width: 120px;
-    height: 30px;
+#select-pc {
+    border: solid 0.3074cqw black;
+    border-radius: 1.0246cqw;
+    width: 12.2951cqw;
+    height: 3.0738cqw;
     padding: 0px;
-    font-size: 12px;
+    font-size: 1.2295cqw;
 }
 
-#select-cc{
-    border: solid 3px black;
-    border-radius: 10px;
-    width: 120px;
-    height: 30px;
+#select-cc {
+    border: solid 0.3074cqw black;
+    border-radius: 1.0246cqw;
+    width: 12.2951cqw;
+    height: 3.0738cqw;
     padding: 0px;
-    font-size: 12px;
+    font-size: 1.2295cqw;
 }
 
 .prog-button {
-    width: 100px;
-    height: 30px;
+    width: 10.2459cqw;
+    height: 3.0738cqw;
     color: white;
-    font-size: 12px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.438);
-    border-radius: 7px;
-    margin: 10px;
+    font-size: 1.2295cqw;
+    box-shadow: 0 0 0.2049cqw 0.2049cqw rgba(0, 0, 0, 0.438);
+    border-radius: 0.7172cqw;
+    margin: 1.0246cqw;
     background-color: rgb(226, 0, 0);
 }
 
 .prog-button:disabled {
     background-color: grey;
     color: darkgrey;
+}
+
+/* Permitir scroll en móviles si el popup es muy alto */
+@media (max-height: 550px) and (orientation: landscape) {
+
+    #pop-up-pc,
+    #pop-up-cc,
+    #info-pop-up {
+        top: 0;
+        transform: translate(-50%, 0);
+        margin-top: 10px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    select {
+        text-align: center;
+    }
 }
