@@ -6,15 +6,17 @@ import img2 from '../assets/02.png';
 import img3 from '../assets/03.png';
 import img4 from '../assets/04.png';
 
-const Gallery = ({ emptyMedia = false }) => {
+const Gallery = ({ emptyMedia = false, customImages = null }) => {
     const { t } = useLanguage();
 
-    const images = [
+    const defaultImages = [
         { src: img1, alt: t('gallery.alt_1') },
         { src: img2, alt: t('gallery.alt_2') },
         { src: img3, alt: t('gallery.alt_3') },
         { src: img4, alt: t('gallery.alt_4') }
     ];
+
+    const images = customImages || defaultImages;
 
     return (
         <section id="gallery" className="gallery-section">

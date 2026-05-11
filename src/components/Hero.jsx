@@ -4,7 +4,7 @@ import gmcWood from '../assets/gmc-wood.png'
 import logo from '../assets/logo2.png';
 import '../styles/components/Hero.css';
 
-const Hero = ({ tKey = 'hero', emptyMedia = false, customLogo }) => {
+const Hero = ({ tKey = 'hero', emptyMedia = false, customLogo, customImage }) => {
     const { t } = useLanguage();
 
     return (
@@ -28,7 +28,7 @@ const Hero = ({ tKey = 'hero', emptyMedia = false, customLogo }) => {
                 <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '0.2s' }}>
                     <div className="hero-image-placeholder">
                         {!emptyMedia ? (
-                            <img src={gmcWood} alt="GMC-001 MIDI Controller Wood Edition" className="hero-image" />
+                            <img src={customImage || gmcWood} alt={t(`${tKey}.title`)} className="hero-image" />
                         ) : (
                             <div className="hero-image" style={{ background: 'rgba(0,0,0,0.2)', width: '100%', aspectRatio: '1/1' }}></div>
                         )}
