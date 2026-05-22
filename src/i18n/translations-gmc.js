@@ -10,6 +10,7 @@ export const translations = {
       gallery: "Galería",
       videos: "Videos",
       contact: "Contacto",
+      manual: "Manual"
     },
     hero: {
       title: "Control total con el ",
@@ -100,6 +101,7 @@ export const translations = {
       gallery: "Gallery",
       videos: "Videos",
       contact: "Contact",
+      manual: "Manual"
     },
     hero: {
       title: "Total control with the ",

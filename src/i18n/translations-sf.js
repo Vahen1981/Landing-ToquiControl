@@ -10,6 +10,7 @@ export const translations = {
       gallery: "Galería",
       videos: "Videos",
       contact: "Contacto",
+      manual: "Manual",
     },
     hero: {
       title: "Lleva tu control al siguiente nivel con ",
@@ -69,6 +70,14 @@ export const translations = {
       demo_amplitube_desc_bold: "Amplitube",
       no_support: "Tu navegador no soporta el elemento de video.",
     },
+    manual: {
+      badge: "Documentación",
+      title: "Manual de ",
+      title_accent: "Usuario",
+      text: "Descubre todas las posibilidades de tu SuperFoot MIDI. Aprende a configurar los modos, calibrar pedales de expresión y exprimir al máximo tu controlador con nuestro manual detallado.",
+      btn_download: "Descargar Manual",
+      btn_view: "Ver Manual Online"
+    },
     contact: {
       title: "¿Listo para tomar el",
       title_accent: "Control",
@@ -94,6 +103,7 @@ export const translations = {
       gallery: "Gallery",
       videos: "Videos",
       contact: "Contact",
+      manual: "Manual",
     },
     hero: {
       title: "Take your control to the next level with ",
@@ -152,6 +162,14 @@ export const translations = {
       demo_amplitube_desc: "Discover how it integrates perfectly with the famous {bold} software. In this video, you can see the setup and usage process.",
       demo_amplitube_desc_bold: "Amplitube",
       no_support: "Your browser does not support the video tag.",
+    },
+    manual: {
+      badge: "Documentation",
+      title: "User ",
+      title_accent: "Manual",
+      text: "Discover all the possibilities of your SuperFoot MIDI. Learn how to configure modes, calibrate expression pedals, and get the most out of your controller with our detailed manual.",
+      btn_download: "Download Manual",
+      btn_view: "View Manual Online"
     },
     contact: {
       title: "Ready to take",

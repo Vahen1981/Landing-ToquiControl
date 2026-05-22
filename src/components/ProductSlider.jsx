@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import gmcWood from '../assets/gmc-2.png';
-import sfRender from '../assets/superfoot-midi-render.png';
+import sfRender from '../assets/superfoot/04.png';
 import { ArrowRight } from 'lucide-react';
 import '../styles/components/ProductSlider.css';
 
@@ -13,6 +13,14 @@ const ProductSlider = () => {
 
     const products = [
         {
+            id: 'sf',
+            title: t('homeBrand.sf_card_title'),
+            desc: t('homeBrand.sf_card_desc'),
+            image: sfRender,
+            link: '/superfoot',
+            theme: 'theme-superfoot'
+        },
+                {
             id: 'gmc',
             title: t('homeBrand.gmc_card_title'),
             desc: t('homeBrand.gmc_card_desc'),
@@ -20,14 +28,6 @@ const ProductSlider = () => {
             link: '/gmc-001',
             theme: 'theme-neutral'
         },
-        {
-            id: 'sf',
-            title: t('homeBrand.sf_card_title'),
-            desc: t('homeBrand.sf_card_desc'),
-            image: sfRender,
-            link: '/superfoot-midi',
-            theme: 'theme-superfoot'
-        }
     ];
 
     useEffect(() => {

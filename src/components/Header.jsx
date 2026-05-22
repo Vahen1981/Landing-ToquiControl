@@ -76,15 +76,16 @@ const Header = ({ onOpenApp, showNavLinks = true, customLogo }) => {
                                 </div>
                             </div>
                             <div className="dropdown-group">
-                                <Link to="/superfoot-midi" className="dropdown-group-title" onClick={() => setIsMobileMenuOpen(false)}>
+                                <Link to="/superfoot" className="dropdown-group-title" onClick={() => setIsMobileMenuOpen(false)}>
                                     {t('nav.sf_name')}
                                 </Link>
                                 <div className="dropdown-sub-items">
-                                    <Link to="/superfoot-midi#home" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.home')}</Link>
-                                    <Link to="/superfoot-midi#features" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gmc')}</Link>
-                                    <Link to="/superfoot-midi#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gallery')}</Link>
-                                    <Link to="/superfoot-midi#app-promo" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.app')}</Link>
-                                    <Link to="/superfoot-midi#video" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.videos')}</Link>
+                                    <Link to="/superfoot#home" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.home')}</Link>
+                                    <Link to="/superfoot#features" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gmc')}</Link>
+                                    <Link to="/superfoot#gallery" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.gallery')}</Link>
+                                    <Link to="/superfoot#app-promo" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.app')}</Link>
+                                    <Link to="/superfoot/manual" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.manual')}</Link>
+                                    <Link to="/superfoot#video" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.videos')}</Link>
                                 </div>
                             </div>
                         </div>
@@ -107,13 +108,14 @@ const Header = ({ onOpenApp, showNavLinks = true, customLogo }) => {
                                 </div>
                             </div>
                             <div className="dropdown-group">
-                                <Link to="/superfoot-midi" className="dropdown-group-title">{t('nav.sf_name')}</Link>
+                                <Link to="/superfoot" className="dropdown-group-title">{t('nav.sf_name')}</Link>
                                 <div className="dropdown-sub-items">
-                                    <Link to="/superfoot-midi#home">{t('nav.home')}</Link>
-                                    <Link to="/superfoot-midi#features">{t('nav.gmc')}</Link>
-                                    <Link to="/superfoot-midi#gallery">{t('nav.gallery')}</Link>
-                                    <Link to="/superfoot-midi#app-promo">{t('nav.app')}</Link>
-                                    <Link to="/superfoot-midi#video">{t('nav.videos')}</Link>
+                                    <Link to="/superfoot#home">{t('nav.home')}</Link>
+                                    <Link to="/superfoot#features">{t('nav.gmc')}</Link>
+                                    <Link to="/superfoot#gallery">{t('nav.gallery')}</Link>
+                                    <Link to="/superfoot#app-promo">{t('nav.app')}</Link>
+                                    <Link to="/superfoot/manual">{t('nav.manual')}</Link>
+                                    <Link to="/superfoot#video">{t('nav.videos')}</Link>
                                 </div>
                             </div>
                         </div>

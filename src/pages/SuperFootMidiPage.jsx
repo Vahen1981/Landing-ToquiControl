@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Gallery from '../components/Gallery';
 import AppPromo from '../components/AppPromo';
+import ManualPromo from '../components/ManualPromo';
 import VideoSection from '../components/VideoSection';
 import Footer from '../components/Footer';
 import { Monitor, X } from 'lucide-react';
@@ -39,6 +40,7 @@ const SuperFootMidiPage = () => {
           <Features />
           <Gallery customImages={sfImages} />
           <AppPromo onOpenApp={handleOpenApp} customImage={sfCapture} urlPath="toquicontrol.cl/superfoot-app" />
+          <ManualPromo customImage={sfRender} />
           {/* <VideoSection /> */}
         </main>
         <Footer onOpenApp={handleOpenApp} />

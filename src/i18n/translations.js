@@ -10,6 +10,7 @@ export const translations = {
       gallery: "Galería",
       videos: "Videos",
       contact: "Contacto",
+      manual: "Manual"
     },
     homeBrand: {
       title: "Domina tu Sonido",
@@ -115,6 +116,7 @@ export const translations = {
       gallery: "Gallery",
       videos: "Videos",
       contact: "Contact",
+      manual: "Manual"
     },
     homeBrand: {
       title: "Master Your Sound",
