@@ -2,7 +2,7 @@ import React from 'react';
 import { Download, FileText, BookOpen } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import '../styles/components/AppPromo.css';
-import manualPdf from '../downloads/SuperFootMIDI_Manual.pdf';
+import manualPdf from '../downloads/SuperFootMIDI_Manual_ES.pdf';
 
 const ManualPromo = ({ customImage }) => {
     const { t } = useLanguage();

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import manualPdf from '../downloads/SuperFootMIDI_Manual.pdf';
+import manualPdf from '../downloads/SuperFootMIDI_Manual_ES.pdf';
 
 const ManualPage = () => {
   useEffect(() => {
