@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../../i18n/LanguageContext';
 import '../../styles/components/VideoSection.css';
-import capture2 from '../../assets/capture2.png';
-import capture5 from '../../assets/capture5.png';
-import capture3 from '../../assets/capture3.png';
-import capture4 from '../../assets/capture4.png';
-import demo1 from '../../assets/demo1.mp4';
-import NotesMode from '../../assets/NotesMode.mp4';
-import Ensamblaje from '../../assets/Ensamblaje.mp4';
-import demoAmplitube from '../../assets/demo-amplitube.mp4';
+import capture2 from '../../assets/GMC-001/capture2.png';
+import capture5 from '../../assets/GMC-001/capture5.png';
+import capture3 from '../../assets/GMC-001/capture3.png';
+import capture4 from '../../assets/GMC-001/capture4.png';
+import demo1 from '../../assets/GMC-001/demo1.mp4';
+import NotesMode from '../../assets/GMC-001/NotesMode.mp4';
+import Ensamblaje from '../../assets/GMC-001/Ensamblaje.mp4';
+import demoAmplitube from '../../assets/GMC-001/demo-amplitube.mp4';
 
 const VideoSection = ({ emptyMedia = false }) => {
     const { t } = useLanguage();

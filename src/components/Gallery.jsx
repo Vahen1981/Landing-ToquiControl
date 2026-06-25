@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import '../styles/components/Gallery.css';
-import img1 from '../assets/01.png';
-import img2 from '../assets/02.png';
-import img3 from '../assets/03.png';
-import img4 from '../assets/04.png';
+import img1 from '../assets/GMC-001/01.png';
+import img2 from '../assets/GMC-001/02.png';
+import img3 from '../assets/GMC-001/03.png';
+import img4 from '../assets/GMC-001/04.png';
 
 const Gallery = ({ emptyMedia = false, customImages = null }) => {
     const { t } = useLanguage();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
-import gmcWood from '../assets/gmc-2.png';
+import gmcWood from '../assets/GMC-001/gmc-2.png';
 import sfRender from '../assets/superfoot/04.png';
 import { ArrowRight } from 'lucide-react';
 import '../styles/components/ProductSlider.css';
