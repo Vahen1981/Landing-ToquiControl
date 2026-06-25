@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Gallery from '../components/Gallery';
 import AppPromo from '../components/AppPromo';
-import VideoSection from '../components/VideoSection';
+import VideoSection from '../components/GMC-001/VideoSection';
 import Footer from '../components/Footer';
 import { Monitor, X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';

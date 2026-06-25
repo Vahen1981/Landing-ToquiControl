@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Gallery from '../components/Gallery';
 import AppPromo from '../components/AppPromo';
 import ManualPromo from '../components/ManualPromo';
-import VideoSection from '../components/VideoSection';
+import VideoSection from '../components/SuperFoot/VideoSection';
 import Footer from '../components/Footer';
 import { Monitor, X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -16,6 +16,7 @@ import sf1 from '../assets/superfoot/01.png';
 import sf2 from '../assets/superfoot/02.png';
 import sf3 from '../assets/superfoot/03.png';
 import sf4 from '../assets/superfoot/04.png';
+// SuperFoot videos are embedded in the component; no imports required here.
 
 const SuperFootMidiPage = () => {
   const { t } = useLanguage();
@@ -41,7 +42,7 @@ const SuperFootMidiPage = () => {
           <Gallery customImages={sfImages} />
           <AppPromo onOpenApp={handleOpenApp} customImage={sfCapture} urlPath="toquicontrol.cl/superfoot-app" />
           <ManualPromo customImage={sfRender} />
-          {/* <VideoSection /> */}
+          <VideoSection />
         </main>
         <Footer onOpenApp={handleOpenApp} />
       </div>

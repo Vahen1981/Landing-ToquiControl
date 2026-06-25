@@ -1,14 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import VideoSection from '../components/SuperFoot/VideoSection';
 
 const SuperFootAppPage = () => {
-  useEffect(() => {
-    window.location.replace(`${import.meta.env.BASE_URL}superfoot-app/index.html`);
-  }, []);
+  const [showWarning] = useState(false);
+
+  const handleOpenApp = () => {
+    window.open(`${import.meta.env.BASE_URL}superfoot-app/index.html`, '_blank');
+  };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: 'var(--bg-dark)', color: 'var(--text-main)' }}>
-      <p>Redirigiendo a la aplicación...</p>
-    </div>
+    <>
+      <Header onOpenApp={handleOpenApp} showNavLinks={true} />
+      <div className="app-wrapper animate-fade-in">
+        <main>
+          <VideoSection />
+        </main>
+        <Footer onOpenApp={handleOpenApp} />
+      </div>
+      {showWarning && null}
+    </>
   );
 };
 
